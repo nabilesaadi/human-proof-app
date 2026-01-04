@@ -3,84 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HumanProof | Certify Your Content's Human Origin</title>
+    <title>HumanProof | Enterprise-Grade Content Certification</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .hero-gradient { background: radial-gradient(circle at top right, #1e293b, #0f172a); }
+    </style>
 </head>
-<body class="bg-slate-50 text-slate-900 font-sans scroll-smooth">
+<body class="bg-white text-slate-900 scroll-smooth">
 
-    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-6 h-16 flex justify-between items-center">
-            <div class="flex items-center gap-2">
-                <div class="bg-blue-600 p-2 rounded-lg text-white">
-                    <i class="fas fa-shield-check text-xl"></i>
+            <div class="flex items-center gap-3">
+                <div class="bg-blue-600 w-8 h-8 rounded flex items-center justify-center text-white shadow-lg shadow-blue-500/30">
+                    <i class="fas fa-shield-check"></i>
                 </div>
-                <span class="text-xl font-bold tracking-tight text-slate-800">HumanProof</span>
+                <span class="text-xl font-extrabold tracking-tighter text-slate-900">HumanProof</span>
             </div>
-            <div class="hidden md:flex gap-8 text-sm font-medium text-slate-600">
-                <a href="#how" class="hover:text-blue-600 transition">How it works</a>
-                <a href="#tool" class="hover:text-blue-600 transition">The Tool</a>
-                <a href="#pricing" class="hover:text-blue-600 transition">Pricing</a>
+            <div class="hidden md:flex gap-10 text-sm font-semibold text-slate-500 uppercase tracking-widest">
+                <a href="#how" class="hover:text-blue-600 transition">Technology</a>
+                <a href="#tool" class="hover:text-blue-600 transition">The App</a>
+                <a href="#pricing" class="hover:text-blue-600 transition">Enterprise</a>
             </div>
-            <a href="#tool" class="bg-slate-900 text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-slate-800 transition">Get Started</a>
+            <a href="#tool" class="bg-blue-600 text-white px-6 py-2 rounded font-bold text-sm hover:bg-blue-700 transition shadow-lg shadow-blue-600/20">
+                Launch Tool
+            </a>
         </div>
     </nav>
 
-    <section class="pt-32 pb-20 px-6">
-        <div class="max-w-4xl mx-auto text-center">
-            <span class="bg-blue-100 text-blue-700 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">100% Human Certified</span>
-            <h1 class="text-5xl md:text-6xl font-black mt-6 mb-6 leading-tight text-slate-900">Protect your writing from AI doubt.</h1>
-            <p class="text-xl text-slate-600 mb-10 max-w-2xl mx-auto">Generate immutable, timestamped proof of authenticity for your articles, essays, and creative works.</p>
+    <section class="hero-gradient pt-40 pb-32 px-6 text-white overflow-hidden relative">
+        <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+            <div class="absolute top-10 left-10 w-96 h-96 bg-blue-500 rounded-full blur-[120px]"></div>
+        </div>
+        
+        <div class="max-w-5xl mx-auto text-center relative z-10">
+            <h1 class="text-6xl md:text-8xl font-extrabold tracking-tighter mb-8 leading-none">
+                The Standard for <span class="text-blue-400">Human Content.</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-slate-400 mb-12 max-w-3xl mx-auto font-light leading-relaxed">
+                Using advanced cryptographic timestamping to prove the human origin of your digital assets. Secure. Immutable. Global.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#tool" class="bg-white text-slate-900 px-10 py-4 rounded font-bold text-lg hover:bg-slate-100 transition shadow-xl">Start Certifying</a>
+                <a href="#how" class="bg-white/10 text-white px-10 py-4 rounded font-bold text-lg border border-white/20 hover:bg-white/20 transition backdrop-blur-sm">Technical Whitepaper</a>
+            </div>
         </div>
     </section>
 
-    <section id="how" class="py-20 bg-white border-y border-slate-200">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <h3 class="text-2xl font-bold mb-12 text-slate-800">How does Human Proofing work?</h3>
-            <div class="grid md:grid-cols-3 gap-12">
-                <div class="space-y-4">
-                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center mx-auto text-xl font-bold">1</div>
-                    <h4 class="font-bold text-lg text-slate-900">Unique Hashing</h4>
-                    <p class="text-slate-500 text-sm">We create a SHA-256 digital fingerprint locally. Your full text is never stored, ensuring total privacy.</p>
+    <section class="py-12 bg-slate-50 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-6 flex flex-wrap justify-around items-center opacity-50 grayscale gap-8">
+            <span class="text-2xl font-bold italic tracking-tighter">JOURNALISM INC</span>
+            <span class="text-2xl font-bold italic tracking-tighter">TECH BLOGS CO</span>
+            <span class="text-2xl font-bold italic tracking-tighter">AI DEFENSE LABS</span>
+            <span class="text-2xl font-bold italic tracking-tighter">LEGAL TRUST</span>
+        </div>
+    </section>
+
+    <section id="how" class="py-32 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-20 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold mb-8 text-slate-900 leading-tight">Securing the future of human creativity.</h2>
+                    <p class="text-slate-600 text-lg mb-8">In an era of generative AI, the ability to prove your content was created by a human at a specific point in time is your greatest asset.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded flex-shrink-0 flex items-center justify-center"><i class="fas fa-lock"></i></div>
+                            <div>
+                                <h4 class="font-bold text-slate-800">SHA-256 Encryption</h4>
+                                <p class="text-sm text-slate-500">We use industry-standard cryptographic hashing for maximum security.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 bg-green-100 text-green-600 rounded flex-shrink-0 flex items-center justify-center"><i class="fas fa-clock"></i></div>
+                            <div>
+                                <h4 class="font-bold text-slate-800">Immutable Timestamps</h4>
+                                <p class="text-sm text-slate-500">Every record is permanent and unchangeable once verified.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="space-y-4">
-                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center mx-auto text-xl font-bold">2</div>
-                    <h4 class="font-bold text-lg text-slate-900">Timestamping</h4>
-                    <p class="text-slate-500 text-sm">The exact date and time are immutably sealed in our secure database.</p>
-                </div>
-                <div class="space-y-4">
-                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center mx-auto text-xl font-bold">3</div>
-                    <h4 class="font-bold text-lg text-slate-900">Public Certificate</h4>
-                    <p class="text-slate-500 text-sm">Receive a unique ID to share and prove the prior existence of your work.</p>
+                <div class="bg-slate-900 rounded-3xl p-8 shadow-2xl relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500/20 blur-3xl group-hover:bg-blue-500/40 transition"></div>
+                    <pre class="text-blue-300 text-xs font-mono"><code>{
+  "algorithm": "SHA-256",
+  "status": "Verified",
+  "origin": "Human",
+  "timestamp": "2026-01-04T20:43:22Z",
+  "network": "Supabase Secure Cloud"
+}</code></pre>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="tool" class="py-24 px-6 bg-slate-50">
-        <div class="max-w-3xl mx-auto">
-            <div class="bg-white p-2 rounded-2xl shadow-2xl border border-slate-200">
-                <div class="p-6">
-                    <textarea id="textContent" class="w-full h-64 p-5 bg-slate-50 border-none rounded-xl focus:ring-2 focus:ring-blue-500 text-slate-700 placeholder:text-slate-400 outline-none resize-none transition" placeholder="Paste your text here (20 characters minimum)..."></textarea>
-                    <button onclick="processCertification()" id="btnAction" class="w-full mt-4 bg-blue-600 text-white font-bold py-4 rounded-xl hover:bg-blue-700 shadow-lg shadow-blue-200 transition-all flex items-center justify-center gap-2">
-                        <i class="fas fa-fingerprint"></i> Certify Now
+    <section id="tool" class="py-32 px-6 bg-slate-100">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-black text-slate-900 mb-4 tracking-tighter">Certification Console</h2>
+                <p class="text-slate-500">Input your content below for instant validation.</p>
+            </div>
+            
+            <div class="bg-white rounded-3xl shadow-2xl border border-slate-200 overflow-hidden">
+                <div class="p-8">
+                    <textarea id="textContent" class="w-full h-80 p-6 bg-slate-50 border-2 border-slate-100 rounded-2xl focus:border-blue-500 outline-none text-slate-700 font-medium transition placeholder:text-slate-300" placeholder="Paste your professional work here..."></textarea>
+                    <button onclick="processCertification()" id="btnAction" class="w-full mt-6 bg-slate-900 text-white font-bold py-5 rounded-2xl hover:bg-blue-600 transition-all flex items-center justify-center gap-3 shadow-xl">
+                        <i class="fas fa-shield-check"></i> Generate Certificate
                     </button>
                 </div>
 
-                <div id="resultSection" class="hidden p-8 border-t border-slate-100 bg-blue-50/50 rounded-b-2xl">
-                    <div class="flex items-center gap-3 text-blue-700 font-bold mb-4">
-                        <i class="fas fa-check-circle text-2xl"></i>
-                        <span>Certification successfully recorded!</span>
+                <div id="resultSection" class="hidden p-10 bg-blue-600 text-white">
+                    <div class="flex items-center gap-4 mb-8">
+                        <i class="fas fa-check-double text-3xl"></i>
+                        <h3 class="text-2xl font-bold italic uppercase tracking-tighter">HumanProof Verified</h3>
                     </div>
-                    <div class="bg-white p-4 rounded-lg border border-blue-200 mb-6">
-                        <p class="text-xs text-slate-400 uppercase font-bold tracking-widest mb-1">Certificate ID</p>
-                        <p id="certId" class="font-mono text-sm break-all font-bold text-blue-800"></p>
+                    <div class="bg-black/20 p-6 rounded-xl border border-white/20 mb-8">
+                        <p class="text-[10px] uppercase font-black tracking-[0.2em] mb-2 opacity-60">Global Certificate Identifier</p>
+                        <p id="certId" class="font-mono text-lg font-bold break-all"></p>
                     </div>
                     <div class="text-center">
-                        <p class="text-sm text-slate-500 mb-4 font-medium">Need an official PDF seal for your website?</p>
-                        <a href="#" class="inline-block bg-slate-900 text-white px-8 py-3 rounded-full font-bold hover:scale-105 transition transform">
-                            Get Pro Badge ($1)
+                        <a href="#" class="bg-white text-blue-600 px-12 py-4 rounded-full font-black text-sm uppercase tracking-widest hover:scale-105 transition shadow-2xl">
+                            Request Professional PDF Stamp ($1)
                         </a>
                     </div>
                 </div>
@@ -88,20 +135,34 @@
         </div>
     </section>
 
-    <footer class="py-12 bg-white border-t border-slate-200">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6 text-slate-900">
-            <div class="flex items-center gap-2">
-                <div class="bg-slate-200 p-1.5 rounded text-slate-600">
-                    <i class="fas fa-shield-check"></i>
+    <footer class="py-20 bg-slate-950 text-slate-500">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-2">
+                    <div class="flex items-center gap-2 text-white mb-6">
+                        <i class="fas fa-shield-check text-blue-500"></i>
+                        <span class="text-2xl font-bold tracking-tighter">HumanProof</span>
+                    </div>
+                    <p class="max-w-xs text-sm">Providing cryptographic certainty for human-generated content in the age of artificial intelligence.</p>
                 </div>
-                <span class="font-bold tracking-tight">HumanProof</span>
+                <div>
+                    <h5 class="text-white font-bold mb-6 text-sm uppercase tracking-widest">Legal</h5>
+                    <ul class="space-y-4 text-sm">
+                        <li><a href="privacy.html" class="hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="hover:text-white transition">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-white font-bold mb-6 text-sm uppercase tracking-widest">Connect</h5>
+                    <ul class="space-y-4 text-sm">
+                        <li><a href="#" class="hover:text-white transition">Enterprise Contact</a></li>
+                        <li><a href="#" class="hover:text-white transition">Twitter / X</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="flex gap-6 text-xs text-slate-400 font-medium">
-                <a href="privacy.html" class="hover:text-blue-600 transition">Privacy Policy</a>
-                <a href="terms.html" class="hover:text-blue-600 transition">Terms of Service</a>
-                <a href="#" class="hover:text-blue-600 transition">Contact</a>
+            <div class="pt-8 border-t border-slate-900 text-[10px] uppercase tracking-[0.3em] font-bold">
+                © 2026 HumanProof Engine | Secure Data Infrastructure
             </div>
-            <p class="text-xs text-slate-400 uppercase tracking-widest">© 2026 HumanProof Engine</p>
         </div>
     </footer>
 
@@ -114,9 +175,9 @@
         async function processCertification() {
             const content = document.getElementById('textContent').value;
             const btn = document.getElementById('btnAction');
-            if (!content || content.length < 20) { alert("Text is too short (20 chars min)"); return; }
+            if (!content || content.length < 20) { alert("Content is too short for enterprise validation."); return; }
             
-            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Securing certification...';
+            btn.innerHTML = '<i class="fas fa-circle-notch fa-spin"></i> Securing immutable record...';
             btn.disabled = true;
 
             try {
@@ -136,10 +197,10 @@
 
                 document.getElementById('resultSection').classList.remove('hidden');
                 document.getElementById('certId').innerText = res[0].id;
-                btn.innerHTML = '<i class="fas fa-check"></i> Certified';
+                btn.innerHTML = '<i class="fas fa-check"></i> Certification Complete';
                 window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
             } catch (err) {
-                alert("Error: " + err.message);
+                alert("Certification Error: " + err.message);
                 btn.disabled = false;
                 btn.innerText = "Try Again";
             }
