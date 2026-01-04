@@ -1,36 +1,81 @@
-<script>
-        const SUPABASE_URL = "https://jxpuzqmfttjuxhibkgig.supabase.co";
-        const SUPABASE_KEY = "sb_publishable_LqTsant7xUHzUx6Cm3a6Pw_rbGXOGUM";
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HumanProof - Certifiez votre humanité</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
+    <header class="p-6 bg-white shadow-sm flex justify-between items-center">
+        <h1 class="text-2xl font-bold text-blue-600">HumanProof</h1>
+        <span class="text-sm text-gray-500">2026 Edition</span>
+    </header>
+
+    <main class="max-w-4xl mx-auto mt-12 p-6">
+        <div class="text-center mb-10">
+            <h2 class="text-4xl font-extrabold mb-4">Prouvez que vous n'êtes pas une IA.</h2>
+            <p class="text-gray-600">Générez un certificat d'authenticité horodaté pour vos écrits.</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-xl shadow-lg">
+            <textarea id="textContent" class="w-full h-48 p-4 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Collez votre texte ici (20 car. min)..."></textarea>
+            <button onclick="processCertification()" id="btnAction" class="w-full mt-6 bg-blue-600 text-white font-bold py-4 rounded-lg hover:bg-blue-700 transition">
+                Certifier ce texte
+            </button>
+        </div>
+
+        <div id="resultSection" class="hidden mt-8 p-6 bg-green-50 border border-green-200 rounded-lg text-center">
+            <p class="text-green-800 font-bold underline">Certification Réussie !</p>
+            <p class="mt-2 text-sm text-gray-600">ID Unique : <span id="certId" class="font-mono font-bold"></span></p>
+        </div>
+    </main>
+
+    <script>
+        // --- CONFIGURATION ---
+        const SUPABASE_URL = "https://jxpuzqmfttjuxhibkgig.supabase.co"; // METS TON URL ICI
+        const SUPABASE_KEY = "sb_publishable_LqTsant7xUHzUx6Cm3a6Pw_rbGXOGUM"; // METS TA CLÉ ICI
+        // ---------------------
 
         const db = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
         async function processCertification() {
             const content = document.getElementById('textContent').value;
             const btn = document.getElementById('btnAction');
-            if (!content || content.length < 20) { alert("Texte trop court"); return; }
-            btn.innerText = "Traitement...";
+            
+            if (!content || content.length < 20) {
+                alert("Le texte est trop court (20 caractères minimum).");
+                return;
+            }
+
+            btn.innerText = "Traitement en cours...";
             btn.disabled = true;
 
-            const encoder = new TextEncoder();
-            const data = encoder.encode(content);
-            const hashBuffer = await crypto.subtle.digest('SHA-256', data);
-            const hashArray = Array.from(new Uint8Array(hashBuffer));
-            const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+            try {
+                const encoder = new TextEncoder();
+                const data = encoder.encode(content);
+                const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+                const hashArray = Array.from(new Uint8Array(hashBuffer));
+                const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
 
-            const { data: res, error } = await db.from('certifications').insert([{ 
-                content_hash: hashHex, 
-                content_preview: content.substring(0, 50),
-                status: 'certified'
-            }]).select();
+                const { data: res, error } = await db.from('certifications').insert([{ 
+                    content_hash: hashHex, 
+                    content_preview: content.substring(0, 50),
+                    status: 'certified'
+                }]).select();
 
-            if (error) {
-                alert("Erreur : " + error.message);
-                btn.disabled = false;
-                btn.innerText = "Certifier ce texte";
-            } else {
+                if (error) throw error;
+
                 document.getElementById('resultSection').classList.remove('hidden');
                 document.getElementById('certId').innerText = res[0].id;
-                btn.innerText = "Certifié ! ✅";
+                btn.innerText = "Terminé ! ✅";
+            } catch (err) {
+                alert("Erreur : " + err.message);
+                btn.innerText = "Certifier ce texte";
+                btn.disabled = false;
             }
         }
     </script>
+</body>
+</html>
