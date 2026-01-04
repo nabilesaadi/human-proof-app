@@ -6,79 +6,35 @@
     <title>Privacy Policy | HumanProof Security</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
-        body { font-family: 'Inter', sans-serif; }
-        .hero-gradient { background: radial-gradient(circle at top right, #1e293b, #0f172a); }
-    </style>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap'); body { font-family: 'Inter', sans-serif; } .hero-gradient { background: radial-gradient(circle at top right, #1e293b, #0f172a); }</style>
 </head>
-<body class="bg-white text-slate-900 scroll-smooth">
-
+<body class="bg-white text-slate-900">
     <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
-        <div class="max-w-7xl mx-auto px-6 h-16 flex justify-between items-center">
-            <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
-                <div class="bg-blue-600 w-8 h-8 rounded flex items-center justify-center text-white shadow-lg shadow-blue-500/30">
-                    <i class="fas fa-shield-check"></i>
-                </div>
-                <span class="text-xl font-extrabold tracking-tighter text-slate-900">HumanProof</span>
-            </a>
-            <a href="index.html" class="text-sm font-bold text-blue-600 hover:text-blue-700 transition">Back to App</a>
+        <div class="max-w-7xl mx-auto px-6 h-16 flex justify-between items-center text-slate-900">
+            <a href="index.html" class="flex items-center gap-3"><div class="bg-blue-600 w-8 h-8 rounded flex items-center justify-center text-white"><i class="fas fa-shield-check"></i></div><span class="text-xl font-extrabold tracking-tighter">HumanProof</span></a>
+            <a href="index.html" class="text-sm font-bold text-blue-600">Back to App</a>
         </div>
     </nav>
-
     <section class="hero-gradient pt-32 pb-20 px-6 text-white text-center">
-        <div class="max-w-4xl mx-auto">
-            <h1 class="text-4xl md:text-5xl font-black tracking-tighter mb-4">Privacy Policy</h1>
-            <p class="text-slate-400 uppercase text-xs font-bold tracking-[0.3em]">Last Updated: January 04, 2026</p>
-        </div>
+        <h1 class="text-5xl font-black tracking-tighter mb-4 text-white">Privacy Policy</h1>
+        <p class="text-slate-400 uppercase text-xs font-bold tracking-[0.3em]">Data Sovereignty Protocols</p>
     </section>
-
-    <section class="py-20 px-6">
-        <div class="max-w-3xl mx-auto prose prose-slate">
-            <div class="space-y-12 text-slate-600 leading-relaxed">
-                
-                <div>
-                    <h2 class="text-2xl font-bold text-slate-900 mb-4">1. Data Sovereignty & Protection</h2>
-                    <p>At HumanProof, we operate under a "Privacy by Design" framework. Our infrastructure is built to ensure that your intellectual property remains yours. Unlike traditional databases, we utilize cryptographic hashing, which means we do not need to store, read, or analyze your full text to certify it.</p>
-                </div>
-
-                <div>
-                    <h2 class="text-2xl font-bold text-slate-900 mb-4">2. Information We Collect</h2>
-                    <p>When you use our certification engine, we collect minimal technical data necessary for the verification process:</p>
-                    <ul class="list-disc pl-6 space-y-2 mt-4">
-                        <li><strong>Cryptographic Hashes:</strong> A SHA-256 digital fingerprint of your content.</li>
-                        <li><strong>Metadata:</strong> Timestamps of the certification and a 50-character preview for your own identification.</li>
-                        <li><strong>Usage Data:</strong> IP addresses and browser types for security monitoring and fraud prevention.</li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h2 class="text-2xl font-bold text-slate-900 mb-4">3. Cookies & Advertising (AdSense Compliance)</h2>
-                    <p>HumanProof uses cookies to enhance user experience. We also participate in the Google AdSense program. Google, as a third-party vendor, uses cookies to serve ads on our site. Google's use of the DART cookie enables it to serve ads to our users based on their visit to our site and other sites on the Internet.</p>
-                    <p class="mt-4 text-sm bg-slate-50 p-4 border-l-4 border-blue-500">Users may opt out of the use of the DART cookie by visiting the Google ad and content network privacy policy.</p>
-                </div>
-
-                <div>
-                    <h2 class="text-2xl font-bold text-slate-900 mb-4">4. Third-Party Services (Lemon Squeezy)</h2>
-                    <p>Payment processing is handled by our partner, Lemon Squeezy. They operate as a Merchant of Record and have their own privacy protocols regarding your credit card information and billing address. We do not store your financial data on our servers.</p>
-                </div>
-
-                <div>
-                    <h2 class="text-2xl font-bold text-slate-900 mb-4">5. GDPR & CCPA Compliance</h2>
-                    <p>Users in the European Union and California have specific rights regarding their data, including the right to access, delete, or port their certification records. To exercise these rights, please contact our data protection officer.</p>
-                </div>
-
-            </div>
-        </div>
+    <section class="py-20 px-6 max-w-3xl mx-auto text-slate-600 leading-relaxed space-y-6">
+        <h2 class="text-2xl font-bold text-slate-900">Your Privacy is Our Code</h2>
+        <p>We use zero-knowledge hashing technology. This means your full text never leaves your browser; we only store the cryptographic hash for verification.</p>
+        <p>We comply with GDPR and CCPA standards to protect your digital rights.</p>
     </section>
-
-    <footer class="py-20 bg-slate-950 text-slate-500">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <div class="flex items-center justify-center gap-2 text-white mb-6">
-                <i class="fas fa-shield-check text-blue-500"></i>
-                <span class="text-2xl font-bold tracking-tighter">HumanProof</span>
+    <footer class="py-20 bg-slate-950 text-slate-500 text-center text-slate-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-wrap justify-center gap-8 mb-10 text-xs font-bold uppercase tracking-widest">
+                <a href="index.html" class="hover:text-white transition">Home</a>
+                <a href="about.html" class="hover:text-white transition">About</a>
+                <a href="contact.html" class="hover:text-white transition">Contact</a>
+                <a href="privacy.html" class="hover:text-white transition text-white">Privacy</a>
+                <a href="terms.html" class="hover:text-white transition">Terms</a>
+                <a href="cookies.html" class="hover:text-white transition">Cookies</a>
             </div>
-            <p class="text-[10px] uppercase tracking-[0.3em] font-bold">© 2026 HumanProof International | Enterprise Security</p>
+            <p class="text-[10px] opacity-40 uppercase tracking-[0.3em]">© 2026 HumanProof International</p>
         </div>
     </footer>
 </body>
