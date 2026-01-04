@@ -3,39 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy | HumanProof Security</title>
+    <title>Privacy Policy | HumanProof Global Security Standard</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap'); body { font-family: 'Inter', sans-serif; } .hero-gradient { background: radial-gradient(circle at top right, #1e293b, #0f172a); }</style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .hero-gradient { background: radial-gradient(circle at top right, #1e293b, #0f172a); }
+        .legal-box { border-left: 4px solid #2563eb; background: #f8fafc; padding: 1.5rem; border-radius: 0 1rem 1rem 0; }
+    </style>
 </head>
-<body class="bg-white text-slate-900">
+<body class="bg-white text-slate-900 scroll-smooth">
+
     <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
-        <div class="max-w-7xl mx-auto px-6 h-16 flex justify-between items-center text-slate-900">
-            <a href="index.html" class="flex items-center gap-3"><div class="bg-blue-600 w-8 h-8 rounded flex items-center justify-center text-white"><i class="fas fa-shield-check"></i></div><span class="text-xl font-extrabold tracking-tighter">HumanProof</span></a>
-            <a href="index.html" class="text-sm font-bold text-blue-600">Back to App</a>
+        <div class="max-w-7xl mx-auto px-6 h-16 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+                <div class="bg-blue-600 w-8 h-8 rounded flex items-center justify-center text-white shadow-lg shadow-blue-500/30">
+                    <i class="fas fa-shield-check"></i>
+                </div>
+                <span class="text-xl font-extrabold tracking-tighter text-slate-900">HumanProof</span>
+            </a>
+            <div class="hidden md:flex gap-10 text-sm font-semibold text-slate-500 uppercase tracking-widest">
+                <a href="about.html" class="hover:text-blue-600 transition">About</a>
+                <a href="terms.html" class="hover:text-blue-600 transition">Terms</a>
+                <a href="index.html#tool" class="hover:text-blue-600 transition">App</a>
+            </div>
+            <a href="index.html" class="text-sm font-bold text-blue-600 hover:text-blue-700 transition">Back to Home</a>
         </div>
     </nav>
-    <section class="hero-gradient pt-32 pb-20 px-6 text-white text-center">
-        <h1 class="text-5xl font-black tracking-tighter mb-4 text-white">Privacy Policy</h1>
-        <p class="text-slate-400 uppercase text-xs font-bold tracking-[0.3em]">Data Sovereignty Protocols</p>
+
+    <section class="hero-gradient pt-40 pb-32 px-6 text-white text-center relative overflow-hidden">
+        <div class="max-w-4xl mx-auto relative z-10">
+            <h1 class="text-4xl md:text-6xl font-black tracking-tighter mb-4">Privacy & Data Governance</h1>
+            <p class="text-slate-400 uppercase text-xs font-black tracking-[0.4em] mb-8">Official Compliance Documentation</p>
+            <div class="inline-flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-2 rounded-full text-xs text-blue-300">
+                <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                Last Verified: January 04, 2026
+            </div>
+        </div>
     </section>
-    <section class="py-20 px-6 max-w-3xl mx-auto text-slate-600 leading-relaxed space-y-6">
-        <h2 class="text-2xl font-bold text-slate-900">Your Privacy is Our Code</h2>
-        <p>We use zero-knowledge hashing technology. This means your full text never leaves your browser; we only store the cryptographic hash for verification.</p>
-        <p>We comply with GDPR and CCPA standards to protect your digital rights.</p>
+
+    <section class="py-24 px-6">
+        <div class="max-w-4xl mx-auto">
+            
+            <div class="prose prose-slate max-w-none space-y-16 text-slate-600">
+                
+                <section>
+                    <h2 class="text-3xl font-bold text-slate-900 mb-6">1. Our Commitment to Privacy</h2>
+                    <p class="text-lg leading-relaxed mb-6">
+                        At HumanProof, privacy is not an afterthought; it is our primary technology. We understand the sensitivity of your creative and professional content. Our system is engineered to provide absolute certainty of authorship while maintaining total confidentiality.
+                    </p>
+                    <div class="legal-box">
+                        <p class="text-sm font-semibold italic text-slate-700 uppercase mb-2 tracking-wider">The Zero-Knowledge Pledge:</p>
+                        <p class="text-slate-600">We do not store, read, or process your full text on our servers. All sensitive data remains within your local environment until the cryptographic hash is generated.</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="text-3xl font-bold text-slate-900 mb-6">2. Information We Collect</h2>
+                    <p class="mb-6">We only collect the minimum amount of data required to provide a verifiable timestamping service:</p>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="bg-slate-50 p-6 rounded-xl border border-slate-100">
+                            <h4 class="font-bold text-slate-900 mb-2">Cryptographic Fingerprints</h4>
+                            <p class="text-sm">We store a SHA-256 hash, a non-reversible mathematical string that represents your text without containing any of the original words.</p>
+                        </div>
+                        <div class="bg-slate-50 p-6 rounded-xl border border-slate-100">
+                            <h4 class="font-bold text-slate-900 mb-2">Verification Metadata</h4>
+                            <p class="text-sm">This includes the exact timestamp of certification and a short 50-character preview for your record-keeping.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="text-3xl font-bold text-slate-900 mb-6">3. Technology Infrastructure</h2>
+                    <p class="mb-8">Your certification data is stored in a decentralized-ready, enterprise-grade infrastructure.</p>
+                    
+                    <div class="bg-slate-900 text-blue-300 p-8 rounded-3xl font-mono text-xs overflow-hidden">
+                        <p class="mb-4 text-white font-bold">// SECURE CERTIFICATION PAYLOAD</p>
+                        <p class="opacity-50">"metadata": {</p>
+                        <p class="ml-4">"encryption": "SHA-256",</p>
+                        <p class="ml-4">"database": "Supabase Secure Cloud",</p>
+                        <p class="ml-4">"immutability": "Write-Once-Read-Many"</p>
+                        <p class="opacity-50">},</p>
+                        <p class="opacity-50">"status": "Verified Human Origin"</p>
+                    </div>
+                    <p class="mt-8 text-sm italic">This data ensures your content's integrity is verifiable globally without exposing your intellectual property.</p>
+                </section>
+
+                <section>
+                    <h2 class="text-3xl font-bold text-slate-900 mb-6">4. Third-Party Partners</h2>
+                    <p class="mb-6">To maintain a professional service, we partner with industry leaders in advertising and payments:</p>
+                    <ul class="space-y-4">
+                        <li>
+                            <strong class="text-slate-900 underline decoration-blue-500">Google AdSense:</strong> Google uses cookies to serve ads based on your visit. The DART cookie allows Google and its partners to serve ads based on your internet usage. You can manage these settings in your Google Account.
+                        </li>
+                        <li>
+                            <strong class="text-slate-900 underline decoration-blue-500">Lemon Squeezy:</strong> As our Merchant of Record, Lemon Squeezy processes all financial transactions. They collect billing information necessary for tax compliance and payment processing.
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2 class="text-3xl font-bold text-slate-900 mb-6">5. Your Global Data Rights</h2>
+                    <p class="mb-6">Depending on your location (GDPR in Europe, CCPA in California), you have specific rights over your data:</p>
+                    <div class="space-y-4">
+                        <div class="flex gap-4">
+                            <div class="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-xs flex-shrink-0">R</div>
+                            <p class="text-sm pt-1"><strong>Right to Access:</strong> You can request a copy of all certification hashes linked to your identity.</p>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-xs flex-shrink-0">E</div>
+                            <p class="text-sm pt-1"><strong>Right to Erasure:</strong> You may request the permanent removal of your certification records from our database.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <hr class="border-slate-100">
+                
+                <section class="text-center pb-12">
+                    <p class="text-sm text-slate-400">Questions regarding our security protocols? <br> Reach our Data Protection Officer at <strong>security@humanproof.io</strong></p>
+                </section>
+
+            </div>
+        </div>
     </section>
-    <footer class="py-20 bg-slate-950 text-slate-500 text-center text-slate-900">
+
+    <footer class="py-20 bg-slate-950 text-slate-500 text-center border-t border-slate-900">
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex flex-wrap justify-center gap-8 mb-10 text-xs font-bold uppercase tracking-widest">
                 <a href="index.html" class="hover:text-white transition">Home</a>
                 <a href="about.html" class="hover:text-white transition">About</a>
-                <a href="contact.html" class="hover:text-white transition">Contact</a>
-                <a href="privacy.html" class="hover:text-white transition text-white">Privacy</a>
+                <a href="contact.html" class="hover:text-white transition text-slate-900">Contact</a>
+                <a href="privacy.html" class="hover:text-white transition text-white underline decoration-blue-500 decoration-2 underline-offset-8">Privacy</a>
                 <a href="terms.html" class="hover:text-white transition">Terms</a>
                 <a href="cookies.html" class="hover:text-white transition">Cookies</a>
             </div>
-            <p class="text-[10px] opacity-40 uppercase tracking-[0.3em]">© 2026 HumanProof International</p>
+            <div class="flex items-center justify-center gap-2 text-white/20 mb-6">
+                <i class="fas fa-shield-check"></i>
+                <span class="text-sm font-bold tracking-tighter uppercase">HumanProof Global Data Shield</span>
+            </div>
+            <p class="text-[10px] opacity-40 uppercase tracking-[0.3em]">© 2026 HumanProof International | Secure Infrastructure Layer</p>
         </div>
     </footer>
+
 </body>
 </html>
