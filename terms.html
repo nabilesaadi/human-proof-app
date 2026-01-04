@@ -3,52 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms of Service | HumanProof</title>
+    <title>Terms of Service | HumanProof Security</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
         body { font-family: 'Inter', sans-serif; }
+        .hero-gradient { background: radial-gradient(circle at top right, #1e293b, #0f172a); }
     </style>
 </head>
-<body class="bg-white text-slate-900">
+<body class="bg-white text-slate-900 scroll-smooth">
 
     <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-6 h-16 flex justify-between items-center">
-            <a href="index.html" class="flex items-center gap-3">
-                <div class="bg-blue-600 w-8 h-8 rounded flex items-center justify-center text-white"><i class="fas fa-shield-check"></i></div>
-                <span class="text-xl font-extrabold tracking-tighter">HumanProof</span>
+            <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+                <div class="bg-blue-600 w-8 h-8 rounded flex items-center justify-center text-white shadow-lg shadow-blue-500/30">
+                    <i class="fas fa-shield-check"></i>
+                </div>
+                <span class="text-xl font-extrabold tracking-tighter text-slate-900">HumanProof</span>
             </a>
-            <a href="index.html" class="text-sm font-bold text-blue-600">Back to App</a>
+            <a href="index.html" class="text-sm font-bold text-blue-600 hover:text-blue-700 transition">Back to App</a>
         </div>
     </nav>
 
-    <section class="pt-32 pb-20 px-6">
-        <div class="max-w-3xl mx-auto">
-            <h1 class="text-5xl font-black tracking-tighter mb-10 text-slate-900">Terms of Service</h1>
-            <div class="prose prose-slate max-w-none text-slate-600 space-y-8">
-                <p class="text-sm uppercase font-bold tracking-widest text-slate-400">Effective: January 2026</p>
+    <section class="hero-gradient pt-32 pb-20 px-6 text-white text-center">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-5xl font-black tracking-tighter mb-4">Terms of Service</h1>
+            <p class="text-slate-400 uppercase text-xs font-bold tracking-[0.3em]">Effective Date: January 04, 2026</p>
+        </div>
+    </section>
+
+    <section class="py-20 px-6">
+        <div class="max-w-3xl mx-auto prose prose-slate">
+            <div class="space-y-12 text-slate-600 leading-relaxed">
                 
                 <div>
-                    <h2 class="text-2xl font-bold text-slate-900 mb-4">1. Scope of Service</h2>
-                    <p>HumanProof provides advanced digital timestamping for professional content creators. By using this platform, you agree to comply with our security protocols and ethical usage guidelines.</p>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">1. Acceptance of Terms</h2>
+                    <p>By accessing the HumanProof platform, you agree to be bound by these Terms of Service and all applicable laws and regulations. If you do not agree with any of these terms, you are prohibited from using or accessing this site.</p>
                 </div>
 
                 <div>
-                    <h2 class="text-2xl font-bold text-slate-900 mb-4">2. Payments & Processing</h2>
-                    <p>Professional certifications are processed via <strong>Lemon Squeezy</strong>. Once a cryptographic seal is issued and entered into the database, it is considered a final digital product.</p>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">2. Service Usage & License</h2>
+                    <p>HumanProof grants you a personal, non-exclusive license to use our cryptographic certification engine. You agree not to:</p>
+                    <ul class="list-disc pl-6 space-y-2 mt-4">
+                        <li>Attempt to reverse engineer the hashing protocol.</li>
+                        <li>Use the service to certify content that you do not own or have rights to.</li>
+                        <li>Automate certification requests via bots without enterprise API authorization.</li>
+                    </ul>
                 </div>
 
                 <div>
-                    <h2 class="text-2xl font-bold text-slate-900 mb-4">3. Intellectual Property</h2>
-                    <p>HumanProof certifies the timestamp of existence but does not claim any ownership over your work. You remain the sole owner of all intellectual property submitted.</p>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">3. Professional Certification & Payments</h2>
+                    <p>Our "Professional Seal" is a paid digital product. Payments are processed through Lemon Squeezy (our Merchant of Record). Once a certificate is registered in the immutable database, the service is considered "delivered" and is generally non-refundable due to the permanent nature of cryptographic timestamps.</p>
                 </div>
+
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">4. Intellectual Property</h2>
+                    <p>HumanProof does not claim ownership of the content you certify. You represent and warrant that you own or have the necessary licenses to the content you submit. HumanProof owns the platform, logos, and the unique certification IDs generated by our system.</p>
+                </div>
+
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">5. Disclaimer & Limitation of Liability</h2>
+                    <p>The materials on HumanProof are provided on an 'as is' basis. HumanProof makes no warranties, expressed or implied, and hereby disclaims all other warranties including, without limitation, implied warranties of merchantability or fitness for a particular purpose.</p>
+                </div>
+
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900 mb-4">6. Governing Law</h2>
+                    <p>Any claim relating to HumanProof's website shall be governed by the laws of the jurisdiction of the service provider without regard to its conflict of law provisions.</p>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <footer class="py-20 bg-slate-950 text-slate-500 text-center">
-        <p class="text-[10px] uppercase tracking-[0.3em] font-bold">© 2026 HumanProof Engine | Secure Infrastructure</p>
+    <footer class="py-20 bg-slate-950 text-slate-500">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="flex items-center justify-center gap-2 text-white mb-6">
+                <i class="fas fa-shield-check text-blue-500"></i>
+                <span class="text-2xl font-bold tracking-tighter">HumanProof</span>
+            </div>
+            <p class="text-[10px] uppercase tracking-[0.3em] font-bold">© 2026 HumanProof International | Enterprise Security</p>
+        </div>
     </footer>
 </body>
 </html>
