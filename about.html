@@ -3,41 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | HumanProof Mission</title>
+    <title>About Us | HumanProof Global Integrity</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap'); body { font-family: 'Inter', sans-serif; }</style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .hero-gradient { background: radial-gradient(circle at top right, #1e293b, #0f172a); }
+        .card-hover:hover { transform: translateY(-5px); transition: all 0.3s ease; }
+    </style>
 </head>
-<body class="bg-white text-slate-900">
+<body class="bg-white text-slate-900 scroll-smooth">
+
     <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-6 h-16 flex justify-between items-center">
-            <a href="index.html" class="flex items-center gap-3"><div class="bg-blue-600 w-8 h-8 rounded flex items-center justify-center text-white"><i class="fas fa-shield-check"></i></div><span class="text-xl font-extrabold tracking-tighter">HumanProof</span></a>
-            <a href="index.html#tool" class="bg-blue-600 text-white px-5 py-2 rounded font-bold text-sm">Launch App</a>
+            <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
+                <div class="bg-blue-600 w-8 h-8 rounded flex items-center justify-center text-white shadow-lg shadow-blue-500/30">
+                    <i class="fas fa-shield-check"></i>
+                </div>
+                <span class="text-xl font-extrabold tracking-tighter text-slate-900">HumanProof</span>
+            </a>
+            <a href="index.html#tool" class="bg-blue-600 text-white px-6 py-2 rounded font-bold text-sm hover:bg-blue-700 transition shadow-lg shadow-blue-600/20">
+                Launch App
+            </a>
         </div>
     </nav>
 
-    <section class="pt-32 pb-20 px-6 text-center bg-slate-50">
-        <h1 class="text-5xl font-black tracking-tighter mb-6">Our Mission</h1>
-        <p class="text-slate-500 max-w-2xl mx-auto text-lg">Defending human creativity in the age of generative AI.</p>
+    <section class="hero-gradient pt-40 pb-32 px-6 text-white text-center relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
+        </div>
+        <div class="max-w-4xl mx-auto relative z-10">
+            <h1 class="text-5xl md:text-7xl font-black tracking-tighter mb-6 leading-tight">The Global Standard for <br><span class="text-blue-400">Content Integrity.</span></h1>
+            <p class="text-xl text-slate-400 max-w-2xl mx-auto font-light leading-relaxed">
+                Founded in 2026, HumanProof is dedicated to protecting human creativity in an age of automated content generation.
+            </p>
+        </div>
     </section>
 
-    <section class="py-20 px-6 max-w-3xl mx-auto space-y-8 text-slate-600">
-        <p>HumanProof was founded in 2026 to solve a growing problem: <strong>The erosion of trust in digital content.</strong> As AI becomes indistinguishable from human writing, authors need a way to prove their work existed before the AI boom.</p>
-        <p>Our technology uses cryptographic security to create an immutable link between a creator, their content, and a specific point in time.</p>
+    <section class="py-24 px-6">
+        <div class="max-w-5xl mx-auto">
+            
+            <div class="grid md:grid-cols-2 gap-16 mb-32 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold mb-6 text-slate-900">The AI Identity Crisis</h2>
+                    <p class="text-slate-600 mb-4 leading-relaxed">
+                        As generative AI becomes increasingly sophisticated, the line between human-authored content and machine-generated text has blurred. This creates a massive trust gap for journalists, academics, and creative professionals.
+                    </p>
+                    <p class="text-slate-600 leading-relaxed">
+                        Without a definitive way to prove <strong>when</strong> and <strong>how</strong> a piece of content was created, the value of human original thought is at risk of being diluted by billions of automated assets.
+                    </p>
+                </div>
+                <div class="bg-slate-50 p-10 rounded-3xl border border-slate-100">
+                    <i class="fas fa-quote-left text-4xl text-blue-200 mb-6"></i>
+                    <p class="text-lg italic text-slate-700 font-medium">"Our mission is to provide an immutable, cryptographic anchor for human work, ensuring that your ideas are protected and verifiable forever."</p>
+                    <div class="mt-6 flex items-center gap-4">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xs uppercase tracking-widest leading-none">HP</div>
+                        <div>
+                            <p class="font-bold text-slate-900">HumanProof Team</p>
+                            <p class="text-xs text-slate-400 font-bold uppercase tracking-widest">Core Infrastructure</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="border-slate-100 mb-32">
+
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-black mb-4 tracking-tighter">Enterprise-Grade Cryptography</h2>
+                <p class="text-slate-500 max-w-2xl mx-auto">We use the same technology that secures global banking and defense systems.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-32">
+                <div class="p-8 bg-white border border-slate-100 rounded-2xl shadow-sm card-hover">
+                    <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-lg flex items-center justify-center mb-6 text-xl"><i class="fas fa-fingerprint"></i></div>
+                    <h3 class="font-bold text-xl mb-4">SHA-256 Hashing</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">
+                        We generate a unique 64-character fingerprint of your text. This mathematical function is one-way, meaning your text cannot be recovered from the hash, ensuring 100% privacy.
+                    </p>
+                </div>
+                <div class="p-8 bg-white border border-slate-100 rounded-2xl shadow-sm card-hover">
+                    <div class="w-12 h-12 bg-green-50 text-green-600 rounded-lg flex items-center justify-center mb-6 text-xl"><i class="fas fa-clock"></i></div>
+                    <h3 class="font-bold text-xl mb-4">Atomic Timestamping</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">
+                        Every certification is timestamped against a synchronized global clock. Once the entry is made into our secure database, it is immutable and cannot be altered.
+                    </p>
+                </div>
+                <div class="p-8 bg-white border border-slate-100 rounded-2xl shadow-sm card-hover">
+                    <div class="w-12 h-12 bg-purple-50 text-purple-600 rounded-lg flex items-center justify-center mb-6 text-xl"><i class="fas fa-database"></i></div>
+                    <h3 class="font-bold text-xl mb-4">Supabase Cloud</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">
+                        Your records are hosted on high-availability, encrypted enterprise servers, ensuring that your proof is accessible 24/7/365 across the globe.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-slate-950 text-white rounded-[3rem] p-12 md:p-20 relative overflow-hidden">
+                <div class="relative z-10">
+                    <h2 class="text-3xl md:text-4xl font-black mb-12 tracking-tighter">Who uses HumanProof?</h2>
+                    <div class="grid md:grid-cols-2 gap-12">
+                        <div class="space-y-4">
+                            <h4 class="text-blue-400 font-bold uppercase tracking-widest text-sm italic">For Journalists</h4>
+                            <p class="text-slate-400 text-sm leading-relaxed">Prove that your investigation was conducted and drafted manually before AI-generated "deepfake" articles are published on the same topic.</p>
+                        </div>
+                        <div class="space-y-4">
+                            <h4 class="text-blue-400 font-bold uppercase tracking-widest text-sm italic">For Authors & Poets</h4>
+                            <p class="text-slate-400 text-sm leading-relaxed">Establish a legal "Prior Existence" record for your manuscripts to prevent plagiarism or unauthorized AI training on your unpublished works.</p>
+                        </div>
+                        <div class="space-y-4">
+                            <h4 class="text-blue-400 font-bold uppercase tracking-widest text-sm italic">For Legal Professionals</h4>
+                            <p class="text-slate-400 text-sm leading-relaxed">Create a cryptographic audit trail for contracts, statements, and evidence that requires a timestamped proof of integrity.</p>
+                        </div>
+                        <div class="space-y-4">
+                            <h4 class="text-blue-400 font-bold uppercase tracking-widest text-sm italic">For Content Agencies</h4>
+                            <p class="text-slate-400 text-sm leading-relaxed">Differentiate your human-centric agency by providing clients with a HumanProof certificate for every deliverable.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </section>
 
-    <footer class="py-20 bg-slate-950 text-slate-500 text-center">
+    <footer class="py-20 bg-slate-950 text-slate-500 text-center border-t border-slate-900">
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex flex-wrap justify-center gap-8 mb-10 text-xs font-bold uppercase tracking-widest">
                 <a href="index.html" class="hover:text-white transition">Home</a>
-                <a href="about.html" class="hover:text-white transition text-white">About</a>
+                <a href="about.html" class="hover:text-white transition text-white underline decoration-blue-500 decoration-2 underline-offset-8">About</a>
                 <a href="contact.html" class="hover:text-white transition">Contact</a>
                 <a href="privacy.html" class="hover:text-white transition">Privacy</a>
                 <a href="terms.html" class="hover:text-white transition">Terms</a>
                 <a href="cookies.html" class="hover:text-white transition">Cookies</a>
             </div>
-            <p class="text-[10px] opacity-40">© 2026 HumanProof International | Secure Data Layer</p>
+            <div class="flex items-center justify-center gap-2 text-white/20 mb-6">
+                <i class="fas fa-shield-check"></i>
+                <span class="text-sm font-bold tracking-tighter uppercase">HumanProof Secure Infrastructure</span>
+            </div>
+            <p class="text-[10px] opacity-40 uppercase tracking-[0.3em]">© 2026 HumanProof International | All Rights Reserved</p>
         </div>
     </footer>
+
 </body>
 </html>
