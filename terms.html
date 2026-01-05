@@ -3,41 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms of Service | HumanProof Enterprise Legal Framework</title>
+    <title>Terms of Service | Human-Integrity & HumanProof Legal Framework</title>
+    <meta name="description" content="Official Terms of Service for HumanProof. Governed by Human-Integrity International standards for digital content certification and cryptographic integrity.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
         body { font-family: 'Inter', sans-serif; }
         .hero-gradient { background: radial-gradient(circle at top right, #1e293b, #0f172a); }
-        .clause-card { border: 1px solid #e2e8f0; padding: 2rem; border-radius: 1.5rem; background: #ffffff; }
+        .glass-nav { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); }
+        .clause-card { border: 1px solid #e2e8f0; padding: 2.5rem; border-radius: 2rem; background: #ffffff; transition: all 0.3s ease; }
+        .clause-card:hover { border-color: #2563eb; shadow: 0 10px 30px -10px rgba(0,0,0,0.1); }
+        .legal-header { color: #0f172a; font-weight: 800; text-transform: uppercase; letter-spacing: -0.02em; }
     </style>
 </head>
 <body class="bg-white text-slate-900 scroll-smooth">
 
-    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+    <nav class="fixed w-full z-50 glass-nav border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-6 h-16 flex justify-between items-center text-slate-900">
-            <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
-                <div class="bg-blue-600 w-8 h-8 rounded flex items-center justify-center text-white shadow-lg shadow-blue-500/30">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <div class="bg-blue-600 w-9 h-9 rounded flex items-center justify-center text-white shadow-lg group-hover:bg-blue-700 transition">
                     <i class="fas fa-shield-check"></i>
                 </div>
-                <span class="text-xl font-extrabold tracking-tighter text-slate-900">HumanProof</span>
+                <div class="flex flex-col">
+                    <span class="text-lg font-extrabold tracking-tighter leading-none text-slate-900 uppercase">HumanProof</span>
+                    <span class="text-[10px] font-bold text-slate-400 tracking-widest uppercase">by Human-Integrity</span>
+                </div>
             </a>
-            <div class="hidden md:flex gap-10 text-sm font-semibold text-slate-500 uppercase tracking-widest text-slate-900">
-                <a href="index.html#how" class="hover:text-blue-600 transition">Technology</a>
+            <div class="hidden md:flex gap-10 text-xs font-bold text-slate-500 uppercase tracking-widest text-slate-900">
+                <a href="index.html#how" class="hover:text-blue-600 transition">Infrastructure</a>
                 <a href="index.html#pricing" class="hover:text-blue-600 transition">Pricing</a>
                 <a href="about.html" class="hover:text-blue-600 transition">Mission</a>
             </div>
-            <a href="index.html#tool" class="bg-blue-600 text-white px-6 py-2 rounded font-bold text-sm hover:bg-blue-700 transition">Launch Tool</a>
+            <a href="index.html#tool" class="bg-slate-900 text-white px-6 py-2 rounded text-xs font-black uppercase tracking-widest hover:bg-blue-600 transition">Console</a>
         </div>
     </nav>
 
-    <section class="hero-gradient pt-40 pb-32 px-6 text-white text-center relative overflow-hidden">
+    <section class="hero-gradient pt-44 pb-32 px-6 text-white text-center relative overflow-hidden">
         <div class="max-w-4xl mx-auto relative z-10">
-            <h1 class="text-4xl md:text-6xl font-black tracking-tighter mb-4">Terms of Service</h1>
-            <p class="text-slate-400 uppercase text-xs font-black tracking-[0.4em] mb-8">Global Legal & Usage Agreement</p>
-            <div class="inline-flex items-center gap-2 bg-white/5 border border-white/10 px-4 py-2 rounded-full text-xs text-blue-300">
-                Effective Date: January 04, 2026
+            <h1 class="text-5xl md:text-7xl font-black tracking-tighter mb-6 uppercase">Service Agreement</h1>
+            <p class="text-slate-400 uppercase text-[10px] font-black tracking-[0.5em] mb-8">Global Legal & Usage Framework</p>
+            <div class="inline-flex items-center gap-2 bg-white/5 border border-white/10 px-5 py-2 rounded-full text-[10px] font-bold text-blue-300 uppercase tracking-widest">
+                Latest Revision: January 05, 2026
             </div>
         </div>
     </section>
@@ -45,85 +52,104 @@
     <section class="py-24 px-6">
         <div class="max-w-4xl mx-auto">
             
-            <div class="prose prose-slate max-w-none space-y-12 text-slate-600">
+            <div class="space-y-12 text-slate-600 leading-relaxed">
                 
-                <p class="text-lg leading-relaxed italic border-b pb-8">
-                    Please read these Terms of Service carefully before using the HumanProof platform. This is a legally binding agreement between you and HumanProof International.
+                <p class="text-xl leading-relaxed italic border-b border-slate-100 pb-12 font-medium">
+                    This agreement governs your access to and use of the HumanProof certification engine and related infrastructure provided by **Human-Integrity International**.
                 </p>
 
                 <div class="clause-card">
-                    <h2 class="text-2xl font-bold text-slate-900 mb-4">1. Acceptance of Terms</h2>
-                    <p>By accessing or using any part of the HumanProof website or certification engine, you agree to be bound by these terms. If you do not agree to all the terms and conditions of this agreement, then you may not access the website or use any services.</p>
+                    <h2 class="text-2xl legal-header mb-6">01. Acceptance of Terms</h2>
+                    <p>
+                        By accessing the HumanProof platform or utilizing our cryptographic services, you acknowledge that you have read, understood, and agreed to be bound by these Terms of Service. These terms constitute a legally binding agreement between the user and **Human-Integrity**.
+                    </p>
                 </div>
 
-                <div>
-                    <h2 class="text-2xl font-bold text-slate-900 mb-4">2. Description of Certification Services</h2>
-                    <p>HumanProof provides a digital timestamping and cryptographic certification service for text-based content. Our technology generates a SHA-256 hash locally in your browser to certify the existence of a document at a specific point in time without storing the original full-text content.</p>
-                    <p class="mt-4">The service includes:</p>
-                    <ul class="list-disc pl-6 space-y-2 mt-4">
-                        <li>Free basic certification IDs.</li>
-                        <li>Paid Professional Certification Badges and PDF Seals.</li>
-                        <li>Immutable database records hosted on secure enterprise infrastructure.</li>
+                <section>
+                    <h2 class="text-2xl legal-header mb-6">02. Certification & Infrastructure</h2>
+                    <p class="mb-6">
+                        HumanProof provides digital content certification powered by the Human-Integrity secure layer. Our service utilizes SHA-256 hashing to anchor content integrity without storing the original text.
+                    </p>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                            <span class="text-[10px] font-black uppercase text-blue-600">Standard Tier</span>
+                            <p class="text-xs mt-1">Immutable Hash ID generation and public registry entry.</p>
+                        </div>
+                        <div class="p-4 bg-slate-50 rounded-xl border border-slate-100">
+                            <span class="text-[10px] font-black uppercase text-blue-600">Professional Tier</span>
+                            <p class="text-xs mt-1">Authorized PDF Seals, Metadata indexing, and verification badges.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="bg-blue-600 text-white p-12 rounded-[2.5rem] shadow-xl">
+                    <h2 class="text-2xl font-black uppercase tracking-tighter mb-6">03. Financial Compliance</h2>
+                    <p class="mb-8 opacity-90">
+                        Our order process is conducted by our authorized online reseller and Merchant of Record, **Lemon Squeezy**.
+                    </p>
+                    <div class="space-y-6 text-sm">
+                        <p><strong>Merchant of Record:</strong> Lemon Squeezy handles all payment processing, global tax compliance, and related customer service inquiries for professional certifications.</p>
+                        <p><strong>Refund Policy:</strong> Due to the immediate and immutable nature of cryptographic timestamping, all Professional Seal purchases are considered final and non-refundable once the hash is anchored to our database.</p>
+                    </div>
+                </div>
+
+                <section>
+                    <h2 class="text-2xl legal-header mb-6">04. Ownership & IP Protection</h2>
+                    <div class="space-y-4">
+                        <p>
+                            <strong>User Content:</strong> Human-Integrity claims no ownership over the content you certify. You retain 100% of your intellectual property rights.
+                        </p>
+                        <p>
+                            <strong>Our Platform:</strong> All logos, the HumanProof certification algorithm, and the Human-Integrity infrastructure are protected by international copyright laws.
+                        </p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="text-2xl legal-header mb-6">05. Usage Protocols</h2>
+                    <p class="mb-6 text-sm">Users of the HumanProof console must adhere to the following integrity standards:</p>
+                    <ul class="list-none p-0 space-y-4 text-xs font-medium">
+                        <li class="flex gap-4 p-4 bg-slate-50 rounded-lg"><i class="fas fa-ban text-red-500 mt-0.5"></i> No submission of fraudulent or plagiarized content as original work.</li>
+                        <li class="flex gap-4 p-4 bg-slate-50 rounded-lg"><i class="fas fa-shield-alt text-blue-500 mt-0.5"></i> Responsibility for maintaining the local copy of certified content for verification.</li>
                     </ul>
+                </section>
+
+                <div class="clause-card border-slate-900 bg-slate-900 text-white">
+                    <h2 class="text-2xl font-black uppercase tracking-tighter mb-6 text-blue-400">06. Limitation of Liability</h2>
+                    <p class="text-sm opacity-80 leading-relaxed">
+                        Human-Integrity provides technical certification tools "as is". While we utilize enterprise-grade infrastructure (Supabase), we do not guarantee 100% uptime or the specific legal admissibility of certificates in all global jurisdictions. In no event shall Human-Integrity be liable for indirect or consequential damages.
+                    </p>
                 </div>
 
-                <div class="bg-blue-50 p-8 rounded-3xl border border-blue-100">
-                    <h2 class="text-2xl font-bold text-blue-900 mb-4">3. Payments, Refunds, and Merchant of Record</h2>
-                    <p class="mb-4">Our order process is conducted by our online reseller **Lemon Squeezy**. Lemon Squeezy is the Merchant of Record for all our orders. They provide all customer service inquiries and handle all tax compliance globally.</p>
-                    <p><strong>Refund Policy:</strong> Due to the immediate and immutable nature of cryptographic timestamping, professional certificates are considered delivered upon generation and database entry. Therefore, all sales are final and non-refundable unless required by specific local consumer protection laws.</p>
-                </div>
-
-                <div>
-                    <h2 class="text-2xl font-bold text-slate-900 mb-4">4. User Conduct & Content Responsibility</h2>
-                    <p>You are solely responsible for the content you submit for certification. By using the service, you represent and warrant that:</p>
-                    <ul class="list-disc pl-6 space-y-2 mt-4">
-                        <li>You own the intellectual property rights to the content or have express permission to certify it.</li>
-                        <li>The content does not violate any local or international laws.</li>
-                        <li>You will not use the service to commit fraud or misrepresent machine-generated content as human work.</li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h2 class="text-2xl font-bold text-slate-900 mb-4">5. Intellectual Property Rights</h2>
-                    <p><strong>Your Content:</strong> HumanProof does not claim any ownership over the text you certify. You retain 100% of your intellectual property rights.</p>
-                    <p class="mt-4"><strong>Our Platform:</strong> HumanProof owns all rights, titles, and interests in and to the platform, including logos, certification algorithms, UI design, and the unique ID generation system.</p>
-                </div>
-
-                <div class="clause-card bg-slate-50 border-slate-200">
-                    <h2 class="text-2xl font-bold text-slate-900 mb-4 text-slate-900">6. Limitation of Liability & Disclaimer</h2>
-                    <p>HumanProof provides technical proof of existence and integrity through cryptographic hashing. However, we do not guarantee:</p>
-                    <ul class="list-disc pl-6 space-y-2 mt-4">
-                        <li>The absolute legal standing of our certificates in every global jurisdiction or court of law.</li>
-                        <li>The permanent availability of the Supabase cloud infrastructure, though we use enterprise-grade providers.</li>
-                    </ul>
-                    <p class="mt-4 italic text-sm">In no event shall HumanProof be liable for any indirect, incidental, or consequential damages resulting from the use or inability to use the certification service.</p>
-                </div>
-
-                <div>
-                    <h2 class="text-2xl font-bold text-slate-900 mb-4">7. Governing Law</h2>
-                    <p>These terms and conditions are governed by and construed in accordance with international digital commerce laws and the laws of the jurisdiction in which the service provider is registered.</p>
-                </div>
+                <section class="text-center pt-12">
+                    <h2 class="text-xl font-black uppercase tracking-widest text-slate-900 mb-4">Legal Inquiries</h2>
+                    <p class="text-sm mb-6">For questions regarding these terms or institutional licensing:</p>
+                    <a href="mailto:contact@human-integrity.com" class="text-2xl font-black text-blue-600 hover:text-slate-900 transition">contact@human-integrity.com</a>
+                </section>
 
             </div>
         </div>
     </section>
 
-    <footer class="py-20 bg-slate-950 text-slate-500 text-center border-t border-slate-900">
+    <footer class="py-24 bg-slate-950 text-slate-500 text-center border-t border-slate-900">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="flex flex-wrap justify-center gap-8 mb-10 text-xs font-bold uppercase tracking-widest text-slate-900">
+            <div class="flex flex-wrap justify-center gap-10 mb-16 text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">
                 <a href="index.html" class="hover:text-white transition">Home</a>
                 <a href="index.html#pricing" class="hover:text-white transition">Pricing</a>
                 <a href="about.html" class="hover:text-white transition">About</a>
                 <a href="contact.html" class="hover:text-white transition">Contact</a>
                 <a href="privacy.html" class="hover:text-white transition">Privacy</a>
-                <a href="terms.html" class="hover:text-white transition">Terms</a>
+                <a href="terms.html" class="text-white">Terms</a>
                 <a href="cookies.html" class="hover:text-white transition">Cookies</a>
             </div>
-            <div class="flex items-center justify-center gap-2 text-white/20 mb-6">
-                <i class="fas fa-shield-check"></i>
-                <span class="text-sm font-bold tracking-tighter uppercase">HumanProof Global Integrity Layer</span>
+            <div class="flex items-center justify-center gap-3 text-white/20 mb-8">
+                <i class="fas fa-shield-check text-xl"></i>
+                <span class="text-xs font-black tracking-[0.3em] uppercase">HumanProof Global Integrity Layer</span>
             </div>
-            <p class="text-[10px] opacity-40 uppercase tracking-[0.3em]">© 2026 HumanProof International | Professional Certification Standards</p>
+            <p class="text-[10px] opacity-40 uppercase tracking-[0.4em] leading-loose">
+                © 2026 HumanProof International | A <a href="https://human-integrity.com" class="underline">Human-Integrity</a> Infrastructure Product<br>
+                Legal Compliance Office: contact@human-integrity.com
+            </p>
         </div>
     </footer>
 
