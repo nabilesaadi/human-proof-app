@@ -166,6 +166,7 @@
                         <i class="fas fa-fingerprint mr-2"></i> Generate Secure Proof
                     </button>
                 </div>
+                
                 <div id="resultSection" class="hidden p-12 bg-blue-600 text-white text-center">
                     <i class="fas fa-check-double text-4xl mb-6"></i>
                     <h3 class="text-3xl font-black tracking-tighter uppercase mb-4 text-white">HumanProof Verified</h3>
@@ -173,8 +174,8 @@
                         <p class="text-[10px] uppercase font-black tracking-widest opacity-60 mb-2 text-white">Immutable Hash Identifier</p>
                         <p id="certId" class="font-mono text-lg font-bold break-all text-white"></p>
                     </div>
-                    <a href="#pricing" class="bg-white text-blue-600 px-12 py-4 rounded-full font-black text-xs uppercase tracking-[0.2em] hover:scale-105 transition shadow-2xl inline-block text-blue-600">
-                        Claim Professional Seal
+                    <a id="certLink" href="#" target="_blank" class="bg-white text-blue-600 px-12 py-4 rounded-full font-black text-xs uppercase tracking-[0.2em] hover:scale-105 transition shadow-2xl inline-block text-blue-600">
+                        View Official Certificate
                     </a>
                 </div>
             </div>
@@ -225,8 +226,13 @@
                     content_hash: hashHex, content_preview: content.substring(0, 50), status: 'certified'
                 }]).select();
                 if (error) throw error;
+                
                 document.getElementById('resultSection').classList.remove('hidden');
                 document.getElementById('certId').innerText = res[0].id;
+                
+                // Logique du lien automatique (Etape 3)
+                document.getElementById('certLink').href = `certificate.html?hash=${hashHex}`;
+                
                 btn.innerHTML = '<i class="fas fa-check"></i> CERTIFIED';
             } catch (err) {
                 alert("Certification Error: " + err.message);
