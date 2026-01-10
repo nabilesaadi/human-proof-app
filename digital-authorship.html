@@ -5,73 +5,170 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="favicon.png">
     <title>Digital Authorship in the Age of AI | HumanProof Insights</title>
+    <meta name="description" content="Explore why cryptographic timestamping is the new standard for digital copyright and content integrity.">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
-        body { font-family: 'Inter', sans-serif; line-height: 1.8; }
+        body { font-family: 'Inter', sans-serif; }
+        .hero-gradient { background: radial-gradient(circle at top right, #1e293b, #0f172a); }
         .glass-nav { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); }
     </style>
 </head>
-<body class="bg-white text-slate-900">
+<body class="bg-white text-slate-900 scroll-smooth">
 
     <nav class="fixed w-full z-50 glass-nav border-b border-slate-200">
-        <div class="max-w-7xl mx-auto px-6 h-16 flex justify-between items-center">
-            <a href="index.html" class="flex items-center gap-3 font-black uppercase tracking-tighter">
-                <img src="favicon.png" class="h-8 w-8" alt="Icon"> HumanProof
+        <div class="max-w-7xl mx-auto px-6 h-16 flex justify-between items-center text-slate-900">
+            <a href="index.html" class="flex items-center gap-3 group text-slate-900">
+                <img src="favicon.png" alt="HumanProof Icon" class="h-10 w-10 rounded-lg shadow-sm group-hover:scale-105 transition">
+                <div class="flex flex-col">
+                    <span class="text-lg font-extrabold tracking-tighter leading-none uppercase">HumanProof</span>
+                    <span class="text-[10px] font-bold text-slate-400 tracking-widest uppercase">by Human-Integrity</span>
+                </div>
             </a>
-            <div class="flex gap-8 text-[10px] font-bold uppercase tracking-widest text-slate-500">
-                <a href="insights.html" class="text-blue-600">Insights</a>
-                <a href="index.html#tool">Console</a>
+            <div class="hidden md:flex gap-10 text-xs font-bold text-slate-500 uppercase tracking-widest">
+                <a href="index.html#how" class="hover:text-blue-600 transition">Infrastructure</a>
+                <a href="index.html#pricing" class="hover:text-blue-600 transition">Pricing</a>
+                <a href="insights.html" class="text-blue-600 font-black">Insights</a>
+                <a href="about.html" class="hover:text-blue-600 transition">Our Mission</a>
             </div>
+            <a href="index.html#tool" class="bg-slate-900 text-white px-6 py-2 rounded text-xs font-black uppercase tracking-widest hover:bg-blue-600 transition">Console</a>
         </div>
     </nav>
 
-    <header class="pt-40 pb-20 px-6 bg-slate-50 border-b">
-        <div class="max-w-3xl mx-auto">
-            <a href="insights.html" class="text-blue-600 text-[10px] font-black uppercase tracking-widest mb-8 inline-block"><i class="fas fa-arrow-left mr-2"></i> Back to Insights</a>
-            <h1 class="text-4xl md:text-5xl font-black tracking-tighter uppercase leading-none mb-6 text-slate-900">Digital Authorship in the Age of Generative AI</h1>
-            <p class="text-slate-400 text-xs font-bold uppercase tracking-widest">January 10, 2026 • 8 min read</p>
+    <header class="pt-40 pb-20 px-6 bg-slate-50 border-b border-slate-200">
+        <div class="max-w-4xl mx-auto text-center md:text-left">
+            <a href="insights.html" class="text-blue-600 text-xs font-black uppercase tracking-widest mb-8 inline-block hover:underline">
+                <i class="fas fa-arrow-left mr-2"></i> Back to Insights
+            </a>
+            <h1 class="text-4xl md:text-6xl font-black tracking-tighter text-slate-900 uppercase leading-[0.9] mb-8">
+                Digital Authorship in the Age of Generative AI: <span class="text-blue-600">Why Timestamping is the New Copyright</span>
+            </h1>
+            <div class="flex flex-wrap items-center justify-center md:justify-start gap-6 text-slate-400 text-[10px] font-black uppercase tracking-widest">
+                <span>Published: January 10, 2026</span>
+                <span class="w-1 h-1 bg-slate-300 rounded-full"></span>
+                <span>8 Min Read</span>
+                <span class="w-1 h-1 bg-slate-300 rounded-full"></span>
+                <span class="text-slate-900">Topic: Digital Rights</span>
+            </div>
         </div>
     </header>
 
     <main class="py-20 px-6">
-        <article class="max-w-3xl mx-auto text-slate-600 space-y-12">
+        <article class="max-w-3xl mx-auto text-slate-600 text-lg leading-relaxed">
             
-            <section>
-                <h2 class="text-2xl font-black text-slate-900 uppercase mb-6">The Crisis of Authenticity</h2>
-                <p>We have reached a pivotal moment in the history of human creativity[cite: 3]. In 2026, the proliferation of AI-generated content is no longer a forecast; it is a saturation point[cite: 4]. As large language models become increasingly sophisticated, the line between human original thought and algorithmic mimicry has blurred[cite: 5].</p>
-                <p class="mt-4">Traditional copyright law is inherently reactive, requiring long legal battles to prove provenance after an infringement has already occurred[cite: 7]. In this high-velocity era, creators require a proactive defense[cite: 8]. The question is: can you prove this came from a human mind at a specific point in time?[cite: 9, 10].</p>
+            <section class="mb-16">
+                <h2 class="text-2xl font-black text-slate-900 uppercase tracking-tight mb-6">The Crisis of Authenticity</h2>
+                <p class="mb-6">We have reached a pivotal moment in the history of human creativity. In 2026, the proliferation of AI-generated content is no longer a forecast; it is a saturation point. As large language models become increasingly sophisticated, the line between human original thought and algorithmic mimicry has blurred to the point of near-indistinguishability without a technical anchor.</p>
+                <p class="mb-8">For authors, researchers, and creators, this environment presents an existential challenge. Traditional copyright law—while foundational—is inherently reactive, often requiring long legal battles to prove provenance after an infringement has already occurred. In the high-velocity era of AI, where ideas can be scraped, synthesized, and redistributed in seconds, creators require a proactive defense.</p>
+                <blockquote class="border-l-4 border-blue-600 pl-6 my-10 italic text-xl text-slate-700 font-medium">
+                    "The fundamental question of the digital age is no longer just 'who owns this?' but 'can you prove this came from a human mind at a specific point in time?'"
+                </blockquote>
+                <p>This is where the paradigm shifts from legal registration to cryptographic proof. Cryptographic timestamping, powered by the Human-Integrity infrastructure, represents the new frontline of intellectual property protection. By leveraging local-side SHA-256 hashing, we provide an immutable record of authorship that is permanent, verifiable, and—most importantly—private.</p>
             </section>
 
-            <section>
-                <h2 class="text-2xl font-black text-slate-900 uppercase mb-6">I. The Invisible Threat: AI Scrapers</h2>
-                <p>The greatest threat today is the silent, automated harvesting of intellectual essence[cite: 16]. AI scrapers operate without consent, deconstructing work into vectors to train models[cite: 20, 22]. Without a verifiable record of when work was first created, creators lose "Patient Zero" status for their ideas[cite: 24].</p>
-                <p class="mt-4">Furthermore, AI models have mastered Stylometry—the study of linguistic style[cite: 26]. They can replicate cadence and vocabulary with startling accuracy, bypassing traditional detectors[cite: 27, 28]. The burden of proof now falls on you to show your version existed before the AI's training cut-off[cite: 30].</p>
+            <section class="mb-16">
+                <h2 class="text-2xl font-black text-slate-900 uppercase tracking-tight mb-6">I. The Invisible Threat: AI Scrapers and Style Mimicry</h2>
+                <p class="mb-6">In the current digital landscape of 2026, the greatest threat to a creator is no longer the literal "copy-paste" thief, but the silent, automated harvesting of their intellectual essence. This chapter examines the two-pronged attack on human original thought: the mass ingestion of data by scrapers and the sophisticated replication of authorial voice through style mimicry.</p>
+                
+                <h3 class="text-xl font-bold text-slate-900 uppercase mb-4">The Silent Harvesting of Intellectual Property</h3>
+                <p class="mb-6">Most authors and researchers are unaware that their work has been "stolen" until it is too late. AI scrapers—sophisticated bots designed to crawl the web at scale—operate without consent or compensation. They do not merely index your work for search results; they deconstruct it into high-dimensional vectors to train Large Language Models (LLMs).</p>
+                <p class="mb-6">By the time a researcher publishes a draft or an author shares a manuscript excerpt, an AI scraper has likely already ingested it. Without a verifiable record of when that work was first created in its original form, the creator loses the ability to claim "Patient Zero" status for their own ideas.</p>
+
+                <h3 class="text-xl font-bold text-slate-900 uppercase mb-4">Beyond Plagiarism: The Era of Style Mimicry</h3>
+                <p class="mb-6">The threat has evolved beyond traditional plagiarism. In 2026, AI models have mastered Stylometry—the study of linguistic style. These models can now replicate the specific cadence, vocabulary, and structural habits of a human writer with startling accuracy.</p>
+                <ul class="space-y-4 mb-8">
+                    <li><strong>Structural Theft:</strong> An AI can ingest your unique research methodology and re-output it in a different language or tone, bypassing traditional plagiarism detectors.</li>
+                    <li><strong>Voice Replication:</strong> By analyzing a few thousand words of your prose, generative models can produce "new" content that sounds indistinguishable from your own.</li>
+                    <li><strong>The Burden of Proof:</strong> If an AI outputs an idea strikingly similar to yours, the burden of proof falls on you to show that your human-authored version existed before the AI's training cut-off.</li>
+                </ul>
+
+                <h3 class="text-xl font-bold text-slate-900 uppercase mb-4">The Problem of "Post-Facto" Proof</h3>
+                <p class="mb-6">The central vulnerability for human creators today is the lack of a proactive timeline. Traditional copyright and legal protections are often "post-facto"—they are designed to help you after you discover an infringement.</p>
+                <p>However, in an era where AI can generate millions of pages of content per day, waiting for an infringement to occur is a losing strategy. To defend against the invisible threat of scrapers and mimicry, creators must shift their focus to proactive provenance. You must be able to present a cryptographic receipt that says: "This specific sequence of human thought existed in my possession on this date, at this exact hour, before it ever touched the public web."</p>
             </section>
 
-            <section>
-                <h2 class="text-2xl font-black text-slate-900 uppercase mb-6">II. From Legal to Cryptographic Proof</h2>
-                <p>Centralized legal systems are proving too slow for the modern creator[cite: 39]. Traditional IP registrations suffer from latency, public disclosure risks, and jurisdictional boundaries[cite: 43, 44, 46].</p>
-                <p class="mt-4">Cryptographic timestamping solves this by shifting the "source of truth" to mathematics[cite: 48]. SHA-256 hashing creates an unchangeable link between creator and content[cite: 51]. Because mathematics is universal, this proof is globally verifiable[cite: 52].</p>
+            <section class="mb-16">
+                <h2 class="text-2xl font-black text-slate-900 uppercase tracking-tight mb-6">II. From Legal Registration to Cryptographic Proof</h2>
+                <p class="mb-6">For centuries, the protection of ideas has relied on centralized legal frameworks. However, in an era where AI can iterate and distribute content at the speed of light, these traditional systems are proving to be too slow and too narrow for the modern creator. To defend human origin, we must move from reactive legal registration to proactive cryptographic proof.</p>
+                
+                <h3 class="text-xl font-bold text-slate-900 uppercase mb-4">The Limitations of the Legacy Model</h3>
+                <p class="mb-6">Traditional copyright and intellectual property (IP) registrations share three fundamental flaws in the age of AI:</p>
+                <ul class="space-y-4 mb-8 list-disc pl-6">
+                    <li><strong>Latency:</strong> Official registration can take weeks or months. In the digital world, an idea can be scraped and repurposed in seconds.</li>
+                    <li><strong>Public Disclosure:</strong> Many registration processes require you to submit your full work to a centralized database. For a researcher or an author, this "public record" can sometimes create the very exposure they seek to avoid.</li>
+                    <li><strong>Jurisdictional Boundaries:</strong> Legal systems are national or regional. A copyright certificate in one country may not easily stop a scraper operating from a different continent.</li>
+                </ul>
+
+                <h3 class="text-xl font-bold text-slate-900 uppercase mb-4">The Cryptographic Paradigm: Immutable and Immediate</h3>
+                <p class="mb-6">Cryptographic timestamping, as implemented by Human-Integrity, solves these issues by shifting the "source of truth" from a government office to the laws of mathematics. Once a document is hashed using SHA-256, it produces a unique digital fingerprint. Even changing a single comma in the text would result in a completely different hash. This creates an unchangeable link between the creator and the content.</p>
+                <p class="mb-6"><strong>Universality:</strong> Mathematics is the same in every country. A cryptographic proof is globally verifiable, providing a consistent standard for authors regardless of their location.</p>
+                <p class="mb-6"><strong>Proactivity:</strong> Authors can anchor their work the moment a draft is finished—or even during the process—creating a definitive timeline of creation that precedes any AI-generated version.</p>
+
+                <h3 class="text-xl font-bold text-slate-900 uppercase mb-4">Privacy as a Feature, Not an Afterthought</h3>
+                <p>The most significant breakthrough in the HumanProof infrastructure is the use of Local-Side Hashing. Unlike traditional cloud services, our console performs the hashing process directly within the user’s browser. The actual text of the manuscript or research paper never reaches our servers. This ensures that authors can generate a professional Integrity Seal without ever risking the confidentiality of their intellectual property.</p>
             </section>
 
-            <section>
-                <h2 class="text-2xl font-black text-slate-900 uppercase mb-6">III. The Privacy-First Revolution</h2>
-                <p>The HumanProof infrastructure utilizes Local-Side Hashing[cite: 55]. Unlike cloud services, the process happens directly in your browser[cite: 56]. The actual text never reaches our servers, ensuring 100% privacy[cite: 57].</p>
-                <p class="mt-4">SHA-256 is not just a password; it is a mathematical certainty[cite: 70]. It is impossible for two different documents to produce the same hash, and a hash cannot be "decrypted" to reveal the original text[cite: 73, 74]. This allows you to share your Integrity Seal publicly while keeping your content confidential[cite: 75].</p>
+            <section class="mb-16">
+                <h2 class="text-2xl font-black text-slate-900 uppercase tracking-tight mb-6">III. The Privacy-First Revolution: How SHA-256 Changes the Game</h2>
+                <p class="mb-6">In the traditional digital world, security often comes at the cost of privacy. Most platforms require you to upload your files to their servers for processing, which means you must "trust" that their employees, their algorithms, or their cloud providers will not access your intellectual property. Human-Integrity flips this paradigm through a "Privacy-First" technical architecture.</p>
+                
+                <h3 class="text-xl font-bold text-slate-900 uppercase mb-4">The Architecture of Local-Side Hashing</h3>
+                <p class="mb-6">The cornerstone of the HumanProof console is that the cryptographic transformation happens entirely within your own web browser. Our infrastructure never "sees" your manuscript, research data, or code. When you select a document for certification, your browser executes the SHA-256 (Secure Hash Algorithm 256-bit) locally on your device.</p>
+                <p class="mb-6">The only data transmitted to our servers is the Digital Fingerprint (the hash)—a 64-character alphanumeric string that is impossible to reverse-engineer to reveal your original content.</p>
+
+                <h3 class="text-xl font-bold text-slate-900 uppercase mb-4">The Digital Fingerprint: Unique and Immutable</h3>
+                <p class="mb-6">SHA-256 is not just a password; it is a mathematical certainty. It creates a "Digital Fingerprint" with properties that are essential for authors:</p>
+                <ul class="space-y-4 mb-8 list-disc pl-6">
+                    <li><strong>Sensitivity:</strong> If you change even a single character, punctuation mark, or space in your 500-page manuscript, the resulting SHA-256 hash will be completely different.</li>
+                    <li><strong>Collision Resistance:</strong> It is mathematically impossible for two different documents to produce the same hash, ensuring your "Digital Receipt" is unique to your specific work.</li>
+                    <li><strong>One-Way Function:</strong> A hash cannot be "decrypted" to reveal the text. This allows you to share your Integrity Seal publicly without ever revealing the contents until you choose to do so.</li>
+                </ul>
+
+                <h3 class="text-xl font-bold text-slate-900 uppercase mb-4">Trusting Mathematics Over Corporations</h3>
+                <p class="mb-6">In the age of AI, where data is the new oil, every centralized database is a potential target for scraping or leaks. By utilizing local-side hashing, Human-Integrity removes the human element from the trust equation. You do not need to trust that our servers are secure; you only need to trust the mathematical laws of cryptography.</p>
+                <p>Even in the event of a global server breach, a hacker would only find a list of hashes (fingerprints), which are useless without the original files that only the authors possess. This "Privacy-First" revolution means that for the first time, researchers and authors can obtain a Professional Integrity Seal with the absolute certainty that their work remains 100% confidential and under their exclusive control.</p>
             </section>
 
-            <div class="bg-slate-900 p-12 rounded-3xl text-white">
-                <h3 class="text-2xl font-black uppercase mb-4">Protect Your Human Origin</h3>
-                <p class="text-slate-400 mb-8">Secure your intellectual property today with a professional Integrity Seal.</p>
-                <a href="index.html#tool" class="bg-blue-600 px-8 py-4 rounded font-black uppercase text-xs tracking-widest">Launch Console</a>
-            </div>
+            <section class="mb-16">
+                <h2 class="text-2xl font-black text-slate-900 uppercase tracking-tight mb-6">The Bridge to Trust: Instant and Universal Verification</h2>
+                <p class="mb-6">The ultimate strength of the Human-Integrity infrastructure is the simplicity of its verification process. Each user receives a professional Integrity Seal and a verifiable PDF certificate designed specifically for academic and legal submissions.</p>
+                <p class="mb-6">This documentation acts as a definitive proof of authorship, allowing third parties—such as publishers, universities, or legal bodies—to verify the content’s integrity against our global synchronized timestamp. Because the proof is based on the immutable SHA-256 hash anchored to our infrastructure, any authorized party can confirm that the work existed in its original form at the exact time of certification.</p>
+                <p>This bridge between private creation and verifiable proof ensures that your intellectual property is not only protected but also easily validated by the world.</p>
+            </section>
+
+            <section class="mb-16">
+                <h2 class="text-2xl font-black text-slate-900 uppercase tracking-tight mb-6">Conclusion: Securing the Legacy of Human Ideas</h2>
+                <p class="mb-6">As we move further into a digital landscape defined by synthetic content, the value of human original thought will only continue to rise. Protecting that value requires more than just legal theories; it requires a robust, technical, and privacy-first infrastructure.</p>
+                <p class="mb-6">Human-Integrity was founded to provide exactly that: a decentralized-ready anchor for the world’s creators. By combining the power of SHA-256 cryptographic hashing with a commitment to zero-knowledge privacy, we allow you to defend your legacy without ever compromising your data.</p>
+                <p class="mb-8 font-bold">In an era of generated noise, let your work carry a mark of absolute certainty. Secure your human origin today.</p>
+                
+                <div class="p-10 bg-blue-600 rounded-3xl text-white shadow-2xl text-center">
+                    <h3 class="text-2xl font-black uppercase mb-4">Ready to Certify Your Work?</h3>
+                    <p class="mb-8 text-white/80">Launch our console and generate your first immutable proof in seconds.</p>
+                    <a href="index.html#tool" class="bg-white text-blue-600 px-10 py-4 rounded-xl font-black uppercase text-xs tracking-widest hover:scale-105 transition inline-block shadow-lg">Launch Console</a>
+                </div>
+            </section>
+
         </article>
     </main>
 
-    <footer class="py-20 bg-slate-950 text-slate-600 text-center text-[10px] font-bold uppercase tracking-[0.4em]">
-        © 2026 HumanProof International | Tetouan, Morocco
+    <footer class="py-24 bg-slate-950 text-slate-500 text-center border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-wrap justify-center gap-10 mb-16 text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">
+                <a href="index.html" class="hover:text-white transition">Home</a>
+                <a href="insights.html" class="hover:text-white transition">Insights</a>
+                <a href="index.html#pricing" class="hover:text-white transition">Pricing</a>
+                <a href="about.html" class="hover:text-white transition">About</a>
+                <a href="contact.html" class="hover:text-white transition">Contact</a>
+                <a href="privacy.html" class="hover:text-white transition">Privacy</a>
+            </div>
+            <p class="text-[10px] opacity-40 uppercase tracking-[0.4em] leading-loose">
+                © 2026 HumanProof International | A Human-Integrity Infrastructure Product<br>
+                Tétouan, Morocco | Corporate Inquiries: contact@human-integrity.com
+            </p>
+        </div>
     </footer>
 
 </body>
