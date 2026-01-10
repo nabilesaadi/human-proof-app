@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="favicon.png">
-    <title>Privacy Policy | Human-Integrity Zero-Knowledge Commitment</title>
+    <title>Privacy Policy | HumanProof Infrastructure Standards</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
@@ -27,64 +27,68 @@
 
     <header class="pt-40 pb-20 px-6 bg-slate-50 border-b">
         <div class="max-w-3xl mx-auto">
-            <h1 class="text-4xl md:text-5xl font-black uppercase tracking-tighter leading-none mb-4">Privacy Policy</h1>
-            <p class="text-blue-600 text-[10px] font-black uppercase tracking-[0.3em]">Last Updated: January 10, 2026</p>
+            <h1 class="text-4xl md:text-5xl font-black uppercase tracking-tighter leading-none mb-4">Privacy & Data Shield</h1>
+            <p class="text-blue-600 text-[10px] font-black uppercase tracking-[0.3em]">Protocol Version: 2026.1.0 • Effective January 2026</p>
         </div>
     </header>
 
     <main class="py-20 px-6">
-        <article class="max-w-3xl mx-auto text-slate-600 space-y-10">
+        <article class="max-w-3xl mx-auto text-slate-600 text-lg space-y-12">
             
             <section>
-                <h2 class="text-xl font-black text-slate-900 uppercase mb-4">1. Our Core Privacy Principle: Zero-Knowledge</h2>
-                <p>At <strong>Human-Integrity</strong>, privacy is not a setting; it is our fundamental technical architecture. We operate on a <strong>Zero-Knowledge Principle</strong>[cite: 140, 148]. This means our infrastructure is designed so that we never have access to, nor the ability to view, your original intellectual property[cite: 141].</p>
+                <h2 class="text-2xl font-black text-slate-900 uppercase mb-6">Introduction: The Zero-Knowledge Mandate</h2>
+                <p>At <strong>HumanProof</strong> (by Human-Integrity), we believe that the only way to truly protect data is to never possess it. Our Privacy Policy is built upon the <strong>Zero-Knowledge Principle</strong>. This means our infrastructure is architected in a way that makes it technically impossible for us to access, view, or leak your intellectual property.</p>
             </section>
 
             <section>
-                <h2 class="text-xl font-black text-slate-900 uppercase mb-4">2. Data We Do NOT Collect</h2>
-                <p>Unlike traditional cloud services, HumanProof does not require you to upload your documents to our servers[cite: 146].</p>
-                <ul class="mt-4 space-y-2 list-disc pl-6">
-                    <li><strong>No Content Storage:</strong> We never see or store your manuscripts, research papers, or raw text[cite: 146, 151].</li>
-                    <li><strong>No Files:</strong> No files are transmitted to our infrastructure during the certification process[cite: 146].</li>
+                <h2 class="text-2xl font-black text-slate-900 uppercase mb-6">1. Data Minimization & Local Hashing</h2>
+                <p>Unlike traditional cloud-based content protection services, HumanProof does not require the "upload" of your work. Our console utilizes <strong>Client-Side Execution</strong>:</p>
+                <ul class="mt-6 space-y-4 list-disc pl-6">
+                    <li><strong>No Raw Content Ingestion:</strong> Your manuscripts, research papers, or code never leave your local device. The "hashing" process happens entirely within your web browser.</li>
+                    <li><strong>Cryptographic Fingerprinting:</strong> We only receive the SHA-256 hash—a 64-character alphanumeric string. This string is a one-way mathematical signature. It cannot be reversed to reveal your original text.</li>
                 </ul>
             </section>
 
             <section>
-                <h2 class="text-xl font-black text-slate-900 uppercase mb-4">3. Data We Process: Local Hashing</h2>
-                <p>When you use the HumanProof console, the cryptographic transformation occurs entirely within your own web browser (Client-Side Execution)[cite: 143, 144].</p>
-                <ul class="mt-4 space-y-2 list-disc pl-6">
-                    <li><strong>SHA-256 Fingerprint:</strong> The only data transmitted to our servers is the 64-character alphanumeric hash (the digital fingerprint)[cite: 149, 150].</li>
-                    <li><strong>Non-Reversibility:</strong> This hash is a one-way mathematical function. It is impossible for Human-Integrity or any third party to reverse-engineer the hash to reveal your original content[cite: 133, 150].</li>
+                <h2 class="text-2xl font-black text-slate-900 uppercase mb-6">2. Information We Store</h2>
+                <p>To maintain a globally verifiable registry of human origin, we store only the minimum metadata required for certification:</p>
+                <ul class="mt-6 space-y-4 list-disc pl-6">
+                    <li><strong>The Hash Record:</strong> The SHA-256 fingerprint used to identify the document.</li>
+                    <li><strong>Synchronized Timestamp:</strong> The exact date and time (atomic clock sync) the hash was anchored to our infrastructure.</li>
+                    <li><strong>Certificate Status:</strong> Whether a Professional Integrity Seal has been issued for the record.</li>
                 </ul>
             </section>
 
             <section>
-                <h2 class="text-xl font-black text-slate-900 uppercase mb-4">4. Information We Store</h2>
-                <p>To provide a verifiable proof of existence, we record the following metadata in our permanent registry:</p>
-                <ul class="mt-4 space-y-2 list-disc pl-6">
-                    <li>The SHA-256 digital fingerprint[cite: 163].</li>
-                    <li>A synchronized universal timestamp[cite: 164].</li>
-                    <li>Information related to your Professional Seal (if purchased) for certificate generation.</li>
+                <h2 class="text-2xl font-black text-slate-900 uppercase mb-6">3. Third-Party Data & Transactions</h2>
+                <p>We leverage industry-leading partners to ensure the security of your transactions and infrastructure:</p>
+                <ul class="mt-6 space-y-4 list-disc pl-6">
+                    <li><strong>Lemon Squeezy (Merchant of Record):</strong> All financial transactions are handled by Lemon Squeezy. They process your payment information according to their own high security standards. Human-Integrity does not store your credit card or billing details.</li>
+                    <li><strong>Infrastructure:</strong> Our cryptographic registry is hosted on secure, enterprise-grade cloud layers with restricted access.</li>
                 </ul>
             </section>
 
             <section>
-                <h2 class="text-xl font-black text-slate-900 uppercase mb-4">5. Security of Intellectual Property</h2>
-                <p>By decentralizing the hashing process to your local device, we eliminate the risk of a "single point of failure"[cite: 152, 153]. Even in the event of a server breach, your intellectual property remains secure because it was never in our possession[cite: 154].</p>
+                <h2 class="text-2xl font-black text-slate-900 uppercase mb-6">4. Intellectual Property Sovereignity</h2>
+                <p>You remain the sole custodian of your work. Because HumanProof does not hold copies of your certified files, it is your responsibility to keep the original digital file safe. Our service only provides the mathematical proof that the file existed in its current form at the recorded time.</p>
             </section>
 
             <section>
-                <h2 class="text-xl font-black text-slate-900 uppercase mb-4">6. Contact Information</h2>
-                <p>For any inquiries regarding our privacy standards or technical architecture, please contact our legal team at:</p>
-                <p class="mt-4 font-bold text-slate-900">contact@human-integrity.com</p>
-                <p class="text-xs text-slate-400 mt-2 uppercase tracking-widest">HumanProof International | Tétouan, Morocco</p>
+                <h2 class="text-2xl font-black text-slate-900 uppercase mb-6">5. Your Rights & Control</h2>
+                <p>You have the right to request information about the metadata hashes linked to your account. However, since the hashes are non-reversible and anonymized identifiers of content, we cannot "delete" a timestamp from the immutable registry once it has been anchored, as this would compromise the integrity of the entire verification system.</p>
+            </section>
+
+            <section class="p-10 bg-slate-50 border border-slate-200 rounded-3xl">
+                <h2 class="text-xl font-black text-slate-900 uppercase mb-4 text-center">Contact our Data Protection Officer</h2>
+                <p class="text-center text-sm">For technical inquiries regarding our Zero-Knowledge architecture or data handling protocols, please reach out to our team.</p>
+                <p class="mt-6 font-bold text-slate-900 text-center uppercase tracking-widest">contact@human-integrity.com</p>
             </section>
 
         </article>
     </main>
 
     <footer class="py-20 bg-slate-950 text-slate-600 text-center text-[10px] font-bold uppercase tracking-[0.4em]">
-        © 2026 HumanProof International | A Human-Integrity Infrastructure
+        © 2026 HumanProof International | Tétouan, Morocco
     </footer>
 
 </body>
