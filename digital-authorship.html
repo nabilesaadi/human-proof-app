@@ -5,126 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="favicon.png">
     <title>Digital Authorship in the Age of AI | HumanProof Insights</title>
-    <meta name="description" content="Explore why cryptographic timestamping is the new standard for digital copyright and content integrity.">
-    
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
-        body { font-family: 'Inter', sans-serif; }
-        .hero-gradient { background: radial-gradient(circle at top right, #1e293b, #0f172a); }
+        body { font-family: 'Inter', sans-serif; line-height: 1.8; }
         .glass-nav { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); }
     </style>
 </head>
-<body class="bg-white text-slate-900 scroll-smooth">
+<body class="bg-white text-slate-900">
 
     <nav class="fixed w-full z-50 glass-nav border-b border-slate-200">
-        <div class="max-w-7xl mx-auto px-6 h-16 flex justify-between items-center text-slate-900">
-            <a href="index.html" class="flex items-center gap-3 group text-slate-900">
-                <img src="favicon.png" alt="HumanProof Icon" class="h-10 w-10 rounded-lg shadow-sm group-hover:scale-105 transition">
-                <div class="flex flex-col">
-                    <span class="text-lg font-extrabold tracking-tighter leading-none uppercase">HumanProof</span>
-                    <span class="text-[10px] font-bold text-slate-400 tracking-widest uppercase">by Human-Integrity</span>
-                </div>
+        <div class="max-w-7xl mx-auto px-6 h-16 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3 font-black uppercase tracking-tighter">
+                <img src="favicon.png" class="h-8 w-8" alt="Icon"> HumanProof
             </a>
-            <div class="hidden md:flex gap-10 text-xs font-bold text-slate-500 uppercase tracking-widest">
-                <a href="index.html#how" class="hover:text-blue-600 transition">Infrastructure</a>
-                <a href="index.html#pricing" class="hover:text-blue-600 transition">Pricing</a>
-                <a href="insights.html" class="text-blue-600 font-black">Insights</a>
-                <a href="about.html" class="hover:text-blue-600 transition">Our Mission</a>
+            <div class="flex gap-8 text-[10px] font-bold uppercase tracking-widest text-slate-500">
+                <a href="insights.html" class="text-blue-600">Insights</a>
+                <a href="index.html#tool">Console</a>
             </div>
-            <a href="index.html#tool" class="bg-slate-900 text-white px-6 py-2 rounded text-xs font-black uppercase tracking-widest hover:bg-blue-600 transition">Console</a>
         </div>
     </nav>
 
-    <header class="pt-40 pb-20 px-6 bg-slate-50 border-b border-slate-200">
-        <div class="max-w-4xl mx-auto">
-            <a href="insights.html" class="text-blue-600 text-xs font-black uppercase tracking-widest mb-8 inline-block hover:underline">
-                <i class="fas fa-arrow-left mr-2"></i> Back to Insights
-            </a>
-            <h1 class="text-4xl md:text-6xl font-black tracking-tighter text-slate-900 uppercase leading-none mb-8">
-                Digital Authorship in the Age of Generative AI: <span class="text-blue-600">Why Timestamping is the New Copyright</span>
-            </h1>
-            <div class="flex items-center gap-6 text-slate-400 text-[10px] font-black uppercase tracking-widest">
-                <span>Published: January 10, 2026</span>
-                <span class="w-1 h-1 bg-slate-300 rounded-full"></span>
-                <span>8 Min Read</span>
-                <span class="w-1 h-1 bg-slate-300 rounded-full"></span>
-                <span class="text-slate-900">Topic: Digital Rights</span>
-            </div>
+    <header class="pt-40 pb-20 px-6 bg-slate-50 border-b">
+        <div class="max-w-3xl mx-auto">
+            <a href="insights.html" class="text-blue-600 text-[10px] font-black uppercase tracking-widest mb-8 inline-block"><i class="fas fa-arrow-left mr-2"></i> Back to Insights</a>
+            <h1 class="text-4xl md:text-5xl font-black tracking-tighter uppercase leading-none mb-6 text-slate-900">Digital Authorship in the Age of Generative AI</h1>
+            <p class="text-slate-400 text-xs font-bold uppercase tracking-widest">January 10, 2026 • 8 min read</p>
         </div>
     </header>
 
     <main class="py-20 px-6">
-        <article class="max-w-3xl mx-auto prose prose-slate prose-lg">
+        <article class="max-w-3xl mx-auto text-slate-600 space-y-12">
             
-            <div class="mb-16">
-                <h2 class="text-2xl font-black text-slate-900 uppercase tracking-tight mb-6">The Crisis of Authenticity</h2>
-                <p class="text-slate-600 leading-relaxed mb-6">
-                    We have reached a pivotal moment in the history of human creativity. In 2026, the proliferation of AI-generated content is no longer a forecast; it is a saturation point. As large language models become increasingly sophisticated, the line between human original thought and algorithmic mimicry has blurred to the point of near-indistinguishability without a technical anchor.
-                </p>
-                <blockquote class="border-l-4 border-blue-600 pl-6 my-10 italic text-xl text-slate-700 font-medium">
-                    "The fundamental question of the digital age is no longer just 'who owns this?' but 'can you prove this came from a human mind at a specific point in time?'"
-                </blockquote>
-                <p class="text-slate-600 leading-relaxed">
-                    This is where the paradigm shifts from legal registration to cryptographic proof. Cryptographic timestamping, powered by the Human-Integrity infrastructure, represents the new frontline of intellectual property protection.
-                </p>
-            </div>
+            <section>
+                <h2 class="text-2xl font-black text-slate-900 uppercase mb-6">The Crisis of Authenticity</h2>
+                <p>We have reached a pivotal moment in the history of human creativity[cite: 3]. In 2026, the proliferation of AI-generated content is no longer a forecast; it is a saturation point[cite: 4]. As large language models become increasingly sophisticated, the line between human original thought and algorithmic mimicry has blurred[cite: 5].</p>
+                <p class="mt-4">Traditional copyright law is inherently reactive, requiring long legal battles to prove provenance after an infringement has already occurred[cite: 7]. In this high-velocity era, creators require a proactive defense[cite: 8]. The question is: can you prove this came from a human mind at a specific point in time?[cite: 9, 10].</p>
+            </section>
 
-            <div class="mb-16">
-                <h2 class="text-2xl font-black text-slate-900 uppercase tracking-tight mb-6">I. The Invisible Threat: AI Scrapers and Style Mimicry</h2>
-                <p class="text-slate-600 leading-relaxed mb-6">
-                    In the current digital landscape, the greatest threat to a creator is no longer the literal "copy-paste" thief, but the silent, automated harvesting of their intellectual essence.
-                </p>
-                <h3 class="text-lg font-bold text-slate-900 uppercase mb-4">The Silent Harvesting of IP</h3>
-                <p class="text-slate-600 leading-relaxed mb-6">
-                    AI scrapers operate without consent or compensation, deconstructing your work into high-dimensional vectors to train Large Language Models (LLMs). Without a verifiable record of when your work was created, you lose the ability to claim "Patient Zero" status for your own ideas.
-                </p>
-                <h3 class="text-lg font-bold text-slate-900 uppercase mb-4">Beyond Plagiarism: Style Mimicry</h3>
-                <p class="text-slate-600 leading-relaxed">
-                    AI models have mastered stylometry—the study of linguistic style. They can replicate your unique cadence and structural habits with startling accuracy, leading to structural theft and voice replication that bypasses traditional detectors.
-                </p>
-            </div>
+            <section>
+                <h2 class="text-2xl font-black text-slate-900 uppercase mb-6">I. The Invisible Threat: AI Scrapers</h2>
+                <p>The greatest threat today is the silent, automated harvesting of intellectual essence[cite: 16]. AI scrapers operate without consent, deconstructing work into vectors to train models[cite: 20, 22]. Without a verifiable record of when work was first created, creators lose "Patient Zero" status for their ideas[cite: 24].</p>
+                <p class="mt-4">Furthermore, AI models have mastered Stylometry—the study of linguistic style[cite: 26]. They can replicate cadence and vocabulary with startling accuracy, bypassing traditional detectors[cite: 27, 28]. The burden of proof now falls on you to show your version existed before the AI's training cut-off[cite: 30].</p>
+            </section>
 
-            <div class="mb-16">
-                <h2 class="text-2xl font-black text-slate-900 uppercase tracking-tight mb-6">II. From Legal Registration to Cryptographic Proof</h2>
-                <p class="text-slate-600 leading-relaxed mb-6">
-                    Traditional centralized legal frameworks are proving to be too slow and too narrow for the modern creator.
-                </p>
-                <ul class="space-y-4 text-slate-600 mb-8">
-                    <li><strong>Latency:</strong> Official registration can take weeks, while ideas are scraped in seconds.</li>
-                    <li><strong>Public Disclosure:</strong> Many processes require submitting full work to a centralized database.</li>
-                    <li><strong>Jurisdictional Boundaries:</strong> Legal systems are limited by national borders.</li>
-                </ul>
-                <p class="text-slate-600 leading-relaxed">
-                    HumanProof solves these issues through <strong>immutability</strong>, <strong>universality</strong>, and <strong>proactivity</strong>, shifting the source of truth to the laws of mathematics.
-                </p>
-            </div>
+            <section>
+                <h2 class="text-2xl font-black text-slate-900 uppercase mb-6">II. From Legal to Cryptographic Proof</h2>
+                <p>Centralized legal systems are proving too slow for the modern creator[cite: 39]. Traditional IP registrations suffer from latency, public disclosure risks, and jurisdictional boundaries[cite: 43, 44, 46].</p>
+                <p class="mt-4">Cryptographic timestamping solves this by shifting the "source of truth" to mathematics[cite: 48]. SHA-256 hashing creates an unchangeable link between creator and content[cite: 51]. Because mathematics is universal, this proof is globally verifiable[cite: 52].</p>
+            </section>
 
-            <div class="p-10 bg-slate-900 rounded-3xl text-white mb-16 shadow-2xl">
-                <h2 class="text-2xl font-black uppercase tracking-tight mb-4">Protect Your Origin Today</h2>
-                <p class="text-slate-400 mb-8 text-sm">Join the creators securing their legacy with Human-Integrity cryptographic standards.</p>
-                <a href="index.html#tool" class="bg-blue-600 text-white px-8 py-3 rounded font-black text-xs uppercase tracking-widest hover:bg-blue-700 transition inline-block">Launch Console</a>
-            </div>
+            <section>
+                <h2 class="text-2xl font-black text-slate-900 uppercase mb-6">III. The Privacy-First Revolution</h2>
+                <p>The HumanProof infrastructure utilizes Local-Side Hashing[cite: 55]. Unlike cloud services, the process happens directly in your browser[cite: 56]. The actual text never reaches our servers, ensuring 100% privacy[cite: 57].</p>
+                <p class="mt-4">SHA-256 is not just a password; it is a mathematical certainty[cite: 70]. It is impossible for two different documents to produce the same hash, and a hash cannot be "decrypted" to reveal the original text[cite: 73, 74]. This allows you to share your Integrity Seal publicly while keeping your content confidential[cite: 75].</p>
+            </section>
 
+            <div class="bg-slate-900 p-12 rounded-3xl text-white">
+                <h3 class="text-2xl font-black uppercase mb-4">Protect Your Human Origin</h3>
+                <p class="text-slate-400 mb-8">Secure your intellectual property today with a professional Integrity Seal.</p>
+                <a href="index.html#tool" class="bg-blue-600 px-8 py-4 rounded font-black uppercase text-xs tracking-widest">Launch Console</a>
+            </div>
         </article>
     </main>
 
-    <footer class="py-24 bg-slate-950 text-slate-500 text-center border-t border-slate-900">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="flex flex-wrap justify-center gap-10 mb-16 text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">
-                <a href="index.html" class="hover:text-white transition">Home</a>
-                <a href="insights.html" class="hover:text-white transition">Insights</a>
-                <a href="index.html#pricing" class="hover:text-white transition">Pricing</a>
-                <a href="about.html" class="hover:text-white transition">About</a>
-                <a href="contact.html" class="hover:text-white transition">Contact</a>
-                <a href="privacy.html" class="hover:text-white transition">Privacy</a>
-            </div>
-            <p class="text-[10px] opacity-40 uppercase tracking-[0.4em] leading-loose">
-                © 2026 HumanProof International | A Human-Integrity Infrastructure Product<br>
-                Tétouan, Morocco | Corporate Inquiries: contact@human-integrity.com
-            </p>
-        </div>
+    <footer class="py-20 bg-slate-950 text-slate-600 text-center text-[10px] font-bold uppercase tracking-[0.4em]">
+        © 2026 HumanProof International | Tetouan, Morocco
     </footer>
 
 </body>
