@@ -34,6 +34,7 @@
             <div class="hidden md:flex gap-10 text-xs font-bold text-slate-500 uppercase tracking-widest">
                 <a href="#how" class="hover:text-blue-600 transition">Infrastructure</a>
                 <a href="#pricing" class="hover:text-blue-600 transition">Pricing</a>
+                <a href="insights.html" class="text-blue-600 font-black hover:text-blue-800 transition">Insights</a>
                 <a href="about.html" class="hover:text-blue-600 transition">Our Mission</a>
             </div>
             <a href="#tool" class="bg-slate-900 text-white px-6 py-2 rounded text-xs font-black uppercase tracking-widest hover:bg-blue-600 transition text-white">Console</a>
@@ -186,6 +187,7 @@
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex flex-wrap justify-center gap-10 mb-16 text-[10px] font-black uppercase tracking-[0.2em] text-slate-400">
                 <a href="index.html" class="hover:text-white transition text-white underline decoration-blue-500 decoration-2 underline-offset-8">Home</a>
+                <a href="insights.html" class="hover:text-white transition">Insights</a>
                 <a href="index.html#pricing" class="hover:text-white transition">Pricing</a>
                 <a href="about.html" class="hover:text-white transition">About</a>
                 <a href="contact.html" class="hover:text-white transition">Contact</a>
@@ -230,7 +232,6 @@
                 document.getElementById('resultSection').classList.remove('hidden');
                 document.getElementById('certId').innerText = res[0].id;
                 
-                // Logique du lien automatique (Etape 3)
                 document.getElementById('certLink').href = `certificate.html?hash=${hashHex}`;
                 
                 btn.innerHTML = '<i class="fas fa-check"></i> CERTIFIED';
