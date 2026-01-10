@@ -168,16 +168,20 @@
                     </button>
                 </div>
                 
-                <div id="resultSection" class="hidden p-12 bg-blue-600 text-white text-center">
-                    <i class="fas fa-check-double text-4xl mb-6"></i>
-                    <h3 class="text-3xl font-black tracking-tighter uppercase mb-4 text-white">HumanProof Verified</h3>
-                    <div class="bg-black/20 p-6 rounded-2xl border border-white/10 mb-8">
-                        <p class="text-[10px] uppercase font-black tracking-widest opacity-60 mb-2 text-white">Immutable Hash Identifier</p>
-                        <p id="certId" class="font-mono text-lg font-bold break-all text-white"></p>
+                <div id="resultSection" class="hidden p-12 bg-slate-900 text-white text-center border-t-4 border-blue-600">
+                    <i class="fas fa-shield-check text-4xl mb-6 text-blue-400"></i>
+                    <h3 class="text-3xl font-black tracking-tighter uppercase mb-4 text-white">Fingerprint Secured Locally</h3>
+                    <p class="text-slate-400 mb-8 max-w-md mx-auto text-sm">Your document's unique SHA-256 hash has been anchored to our infrastructure. To receive your official PDF certificate and professional integrity seal, please claim your seal below.</p>
+                    
+                    <div class="flex flex-col md:flex-row gap-6 justify-center items-center">
+                        <a href="#pricing" class="bg-blue-600 text-white px-10 py-4 rounded-xl font-black text-xs uppercase tracking-[0.2em] hover:bg-blue-700 transition shadow-2xl inline-block">
+                            Claim Professional Seal ($4.99)
+                        </a>
+                        <div class="text-left">
+                            <p class="text-[8px] uppercase font-black tracking-widest opacity-40 mb-1">Local Hash Reference</p>
+                            <p id="certId" class="font-mono text-xs font-bold text-blue-400 tracking-tighter"></p>
+                        </div>
                     </div>
-                    <a id="certLink" href="#" target="_blank" class="bg-white text-blue-600 px-12 py-4 rounded-full font-black text-xs uppercase tracking-[0.2em] hover:scale-105 transition shadow-2xl inline-block text-blue-600">
-                        View Official Certificate
-                    </a>
                 </div>
             </div>
         </div>
@@ -216,25 +220,33 @@
             const content = document.getElementById('textContent').value;
             const btn = document.getElementById('btnAction');
             if (!content || content.length < 20) { alert("Input too short for enterprise certification."); return; }
-            btn.innerHTML = '<i class="fas fa-circle-notch fa-spin"></i> SECURING IMMUTABLE RECORD...';
+            
+            btn.innerHTML = '<i class="fas fa-circle-notch fa-spin"></i> ANCHORING PROOF...';
             btn.disabled = true;
+
             try {
                 const encoder = new TextEncoder();
                 const data = encoder.encode(content);
                 const hashBuffer = await crypto.subtle.digest('SHA-256', data);
                 const hashArray = Array.from(new Uint8Array(hashBuffer));
                 const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+
+                // Correction : Status 'pending_payment' pour inciter à l'achat du sceau
                 const { data: res, error } = await db.from('certifications').insert([{ 
-                    content_hash: hashHex, content_preview: content.substring(0, 50), status: 'certified'
+                    content_hash: hashHex, content_preview: content.substring(0, 50), status: 'pending_payment'
                 }]).select();
+                
                 if (error) throw error;
                 
                 document.getElementById('resultSection').classList.remove('hidden');
-                document.getElementById('certId').innerText = res[0].id;
+                // On affiche seulement un ID partiel pour sécuriser le tunnel de vente
+                document.getElementById('certId').innerText = res[0].id.substring(0, 8) + "... [PROTECTED]";
                 
-                document.getElementById('certLink').href = `certificate.html?hash=${hashHex}`;
+                btn.innerHTML = '<i class="fas fa-check"></i> HASH SECURED';
                 
-                btn.innerHTML = '<i class="fas fa-check"></i> CERTIFIED';
+                // Scroll fluide vers la zone de conversion
+                document.getElementById('resultSection').scrollIntoView({ behavior: 'smooth' });
+
             } catch (err) {
                 alert("Certification Error: " + err.message);
                 btn.disabled = false;
