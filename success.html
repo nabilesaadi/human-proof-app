@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <title>Certification Success | HumanProof Official Seal</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .hero-gradient { background: radial-gradient(circle at top right, #1e293b, #0f172a); }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 min-h-screen flex flex-col">
+
+    <nav class="w-full h-16 border-b bg-white flex items-center px-6">
+        <a href="index.html" class="flex items-center gap-2 font-black uppercase text-[10px] tracking-widest">
+            <img src="favicon.png" class="h-6 w-6"> HumanProof
+        </a>
+    </nav>
+
+    <main class="flex-grow flex items-center justify-center py-20 px-6">
+        <div class="max-w-xl w-full bg-white rounded-[2.5rem] shadow-2xl border border-slate-200 overflow-hidden text-center p-12">
+            <div id="loadingState">
+                <div class="w-20 h-20 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center mx-auto text-3xl mb-8 animate-bounce">
+                    <i class="fas fa-award"></i>
+                </div>
+                <h1 class="text-3xl font-black uppercase tracking-tighter mb-4">Securing Your Seal...</h1>
+                <p class="text-slate-500 text-sm">We are finalizing your cryptographic certificate and indexing your record in the global registry.</p>
+            </div>
+
+            <div id="successState" class="hidden">
+                <div class="w-20 h-20 bg-green-50 text-green-600 rounded-full flex items-center justify-center mx-auto text-3xl mb-8">
+                    <i class="fas fa-check-double"></i>
+                </div>
+                <h1 class="text-3xl font-black uppercase tracking-tighter mb-4">Payment Confirmed</h1>
+                <p class="text-slate-500 text-sm mb-10">Your Professional Integrity Seal is ready. This document serves as your official mathematical proof of existence.</p>
+                
+                <div class="space-y-4">
+                    <button onclick="generatePDF()" class="w-full bg-slate-900 text-white font-black py-5 rounded-2xl hover:bg-blue-600 transition shadow-xl uppercase tracking-[0.2em] text-sm">
+                        <i class="fas fa-file-pdf mr-2"></i> Download Official Certificate
+                    </button>
+                    <a href="index.html" class="block text-[10px] font-black uppercase tracking-widest text-slate-400 hover:text-slate-900 transition">Return to Console</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const SUPABASE_URL = "https://jxpuzqmfttjuxhibkgig.supabase.co";
+        const SUPABASE_KEY = "sb_publishable_LqTsant7xUHzUx6Cm3a6Pw_rbGXOGUM";
+        const db = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+        let certData = null;
+
+        // 1. Récupérer le hash depuis l'URL (ex: success.html?hash=...)
+        const urlParams = new URLSearchParams(window.location.search);
+        const hash = urlParams.get('hash');
+
+        async function initSuccess() {
+            if (!hash) {
+                window.location.href = 'index.html';
+                return;
+            }
+
+            try {
+                // Mise à jour du statut dans Supabase (Passage de 'pending_payment' à 'certified')
+                const { data, error } = await db
+                    .from('certifications')
+                    .update({ status: 'certified' })
+                    .eq('content_hash', hash)
+                    .select()
+                    .single();
+
+                if (error) throw error;
+                certData = data;
+
+                // Affichage de l'état de succès
+                document.getElementById('loadingState').classList.add('hidden');
+                document.getElementById('successState').classList.remove('hidden');
+            } catch (err) {
+                console.error(err);
+                alert("An error occurred while retrieving your certificate.");
+            }
+        }
+
+        async function generatePDF() {
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+            const date = new Date(certData.created_at).toLocaleString();
+
+            // --- Design du PDF ---
+            // Bordure
+            doc.setDrawColor(226, 232, 240);
+            doc.rect(5, 5, 200, 287);
+
+            // En-tête
+            doc.setFont("helvetica", "bold");
+            doc.setFontSize(22);
+            doc.text("HUMANPROOF", 105, 40, { align: "center" });
+            
+            doc.setFontSize(10);
+            doc.setFont("helvetica", "normal");
+            doc.setTextColor(100);
+            doc.text("Official Certificate of Content Integrity", 105, 48, { align: "center" });
+
+            // Sceau visuel
+            doc.setDrawColor(37, 99, 235);
+            doc.setLineWidth(1);
+            doc.circle(105, 80, 20);
+            doc.setFontSize(8);
+            doc.setTextColor(37, 99, 235);
+            doc.text("VERIFIED", 105, 78, { align: "center" });
+            doc.text("HUMAN ORIGIN", 105, 83, { align: "center" });
+
+            // Informations Techniques
+            doc.setTextColor(15, 23, 42);
+            doc.setFontSize(12);
+            doc.setFont("helvetica", "bold");
+            doc.text("CRYPTO-IDENTIFIER (SHA-256 HASH):", 30, 120);
+            
+            doc.setFont("courier", "normal");
+            doc.setFontSize(9);
+            doc.text(certData.content_hash, 30, 128);
+
+            doc.setFont("helvetica", "bold");
+            doc.setFontSize(12);
+            doc.text("UNIVERSAL TIMESTAMP:", 30, 145);
+            doc.setFont("helvetica", "normal");
+            doc.text(date + " (UTC Sync)", 30, 153);
+
+            doc.setFont("helvetica", "bold");
+            doc.text("REGISTRY REFERENCE ID:", 30, 170);
+            doc.setFont("helvetica", "normal");
+            doc.text(certData.id, 30, 178);
+
+            // Texte de loi / Description
+            doc.setFontSize(10);
+            doc.setTextColor(100);
+            const description = "This document confirms that the digital content associated with the hash above existed in its recorded state at the date and time specified. Any modification to the original file will invalidate this certificate due to the cryptographic sensitivity of the SHA-256 algorithm.";
+            doc.text(description, 30, 200, { maxWidth: 150 });
+
+            // Pied de page Zero-Knowledge
+            doc.setFontSize(8);
+            doc.setFont("helvetica", "italic");
+            doc.text("Human-Integrity Infrastructure operates on a Zero-Knowledge architecture. We do not store the original content.", 105, 270, { align: "center" });
+
+            // Sauvegarde
+            doc.save(`HumanProof-Certificate-${certData.id.substring(0, 8)}.pdf`);
+        }
+
+        initSuccess();
+    </script>
+</body>
+</html>
