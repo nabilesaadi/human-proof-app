@@ -101,17 +101,17 @@
             <div class="grid md:grid-cols-3 gap-16">
                 <div class="space-y-6">
                     <div class="w-20 h-20 bg-blue-50 text-blue-600 rounded-3xl flex items-center justify-center mx-auto text-3xl shadow-sm"><i class="fas fa-lock"></i></div>
-                    <h3 class="text-xl font-black uppercase tracking-tighter text-slate-900">Privacy-First Hashing</h3>
+                    <h3 class="text-xl font-black uppercase tracking-tighter text-slate-900">Cryptographic Privacy</h3>
                     <p class="text-slate-500 text-sm leading-relaxed">We utilize local-side SHA-256 fingerprinting. Your full text never reaches our servers, ensuring 100% intellectual property privacy.</p>
                 </div>
                 <div class="space-y-6">
                     <div class="w-20 h-20 bg-blue-50 text-blue-600 rounded-3xl flex items-center justify-center mx-auto text-3xl shadow-sm"><i class="fas fa-clock"></i></div>
-                    <h3 class="text-xl font-black uppercase tracking-tighter text-slate-900">Atomic Timestamp</h3>
+                    <h3 class="text-xl font-black uppercase tracking-tighter text-slate-900">Atomic Persistence</h3>
                     <p class="text-slate-500 text-sm leading-relaxed">Every hash is anchored to a synchronized global clock. Once recorded, the certification is immutable and permanent.</p>
                 </div>
                 <div class="space-y-6">
                     <div class="w-20 h-20 bg-blue-50 text-blue-600 rounded-3xl flex items-center justify-center mx-auto text-3xl shadow-sm"><i class="fas fa-shield-alt"></i></div>
-                    <h3 class="text-xl font-black uppercase tracking-tighter text-slate-900">Public ID Registry</h3>
+                    <h3 class="text-xl font-black uppercase tracking-tighter text-slate-900">Global Verification</h3>
                     <p class="text-slate-500 text-sm leading-relaxed">Generated certificates are instantly verifiable by publishers or legal entities via our professional public registry.</p>
                 </div>
             </div>
@@ -231,7 +231,6 @@
                 const hashArray = Array.from(new Uint8Array(hashBuffer));
                 const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
 
-                // Correction : Status 'pending_payment' pour inciter à l'achat du sceau
                 const { data: res, error } = await db.from('certifications').insert([{ 
                     content_hash: hashHex, content_preview: content.substring(0, 50), status: 'pending_payment'
                 }]).select();
@@ -239,12 +238,9 @@
                 if (error) throw error;
                 
                 document.getElementById('resultSection').classList.remove('hidden');
-                // On affiche seulement un ID partiel pour sécuriser le tunnel de vente
                 document.getElementById('certId').innerText = res[0].id.substring(0, 8) + "... [PROTECTED]";
                 
                 btn.innerHTML = '<i class="fas fa-check"></i> HASH SECURED';
-                
-                // Scroll fluide vers la zone de conversion
                 document.getElementById('resultSection').scrollIntoView({ behavior: 'smooth' });
 
             } catch (err) {
